@@ -1,0 +1,86 @@
+.highlights-section {
+    background: $grey-nav;
+    padding-top: 75px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .uk-slider-nav {
+        margin-top: 55px;
+        li {
+            padding-left: 17px;
+        }
+        a {
+            border-color: $orange;
+            height: 15px;
+            width: 15px;
+            @include hover {
+                background: $orange;    
+            }
+        }
+        .uk-active a {
+            background: $orange;
+        }
+    }
+    @media (max-width: $breakpointLarge) {
+        padding: 75px 0 40px;
+        .uk-slider-nav {
+            margin-top: 40px;
+        }
+    }
+}
+
+.highlights-inner {
+    position: relative;
+    top: 215px;
+    @media (max-width: $breakpointLarge) {
+        top: 0;
+    }
+}
+
+.highlights-nav {
+
+    li {
+        position: relative;
+    }
+
+    li::before,
+    li::after,
+    button::before,
+    button::after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        display: block;
+    }
+
+    li::before,
+    li::after {
+        left: -10px;
+    }
+
+    li::before {
+        // background: ;
+        width: 10px;
+        height: 10px;
+    }
+
+    button {
+        font-size: 15px;
+        font-family: $font-bold;
+        position: relative;
+
+        &::after,
+        &::before {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #222;
+            // border: 1px solid red;
+            z-index: 2;
+        }
+
+        &::after {
+            left: -20px;
+        }
+    }
+}

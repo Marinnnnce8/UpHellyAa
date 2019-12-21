@@ -1,0 +1,106 @@
+.schedule-section {
+    background: $grey-nav;
+    padding: 95px 0 85px;
+    h2 {
+        margin-bottom: 40px;
+    }
+    @media (max-width: $breakpointLarge) {
+        padding: 100px 0 80px;
+    }
+}
+
+.schedule-box {
+    border: 2px solid $grey-coal;
+    background: $grey-coal;
+    border-radius: 10px;
+    position: relative;
+    transition: $nbSec ease-in-out;
+    padding: 35px 33px 32px 30px;
+
+    a {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    >span {
+        &:first-of-type {
+            font-family: $font-bold;
+            margin-bottom: 5px;
+            display: block;
+            line-height: 1;
+            font-size: 42px;
+
+            sup {
+                font-family: $font-default;
+                font-size: 16px;
+                margin-left: 3px;
+                top: -1.2em;
+            }
+        }
+
+        &:last-of-type {
+            position: relative;
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: $font-bold;
+            transition: $nbSec ease-in-out;
+
+            svg {
+                border-radius: 50%;
+                background: $orange-dark;
+                position: absolute;
+                left: 0;
+                top: 3px;
+                opacity: 0;
+                height: 16px;
+                transition: $nbSec ease-in-out;
+                width: 16px;
+            }
+
+            >span::before {
+                display: inline-block;
+                font-size: 16px;
+                color: $orange-dark;
+                margin-left: 10px;
+            }
+
+            polyline,
+            line {
+                color: $grey-coal;
+            }
+        }
+    }
+
+    @include hover {
+        border-color: $orange-dark;
+        >span {
+            &:last-of-type {
+                padding-left: 20px;
+                color: $orange;
+                text-decoration: underline;
+
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @media (max-width: $breakpointLarge) {
+        padding: 30px 25px 25px;
+        span {
+            &:first-of-type {
+                font-size: 36px;
+                sup {
+                    top: -1em;
+                }
+            }
+            &:last-of-type {
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.about-section {
+    padding: 125px 0 65px;
+
+    h2 {
+        margin-bottom: 20px;
+        color: $grey-dark;
+    }
+
+    span {
+        display: block;
+        color: $grey-dark;
+        font-size: 20px;
+        position: relative;
+        padding-bottom: 48px;
+        margin-bottom: 50px;
+        line-height: 1;
+
+        svg {
+            background: $grey-arrow;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            height: 20px;
+            border-radius: 50%;
+            color: $white;
+            width: 20px;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 20px;
+
+        &.left {
+            color: $grey-dark;
+            font-family: $font-georgia;
+            font-size: 24px;
+        }
+
+        &.right {
+            color: $grey-mid;
+            padding-left: 15px;
+
+            .uk-button {
+                font-size: inherit;
+                font-family: $font-bold;
+                text-transform: none;
+                width: auto;
+                height: auto;
+                color: $orange-mid;
+
+                &::before {
+                    border-color: $orange-mid;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        padding-top: 80px;
+        span {
+            margin-bottom: 30px;
+        }
+        p {
+            &.left {
+                font-size: 20px;
+            }
+            &.right {
+                font-size: 17px;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.banner {
+	min-height: 100vh;
+	position: relative;	
+	padding: 445px 0 75px;
+	.subtitle {
+		font-size: 21px;
+		font-weight: 700;
+		font-family: $font-georgia;
+	}
+	.uk-slidenav {
+        background: $black;
+        border-radius: 50%;
+        height: 58px;
+		width: 58px;
+		transform: translateX(50%);
+		transition: $nbSec ease-in-out;
+		&:first-of-type {
+			margin-bottom: 7px;
+		}
+        svg {
+			fill: $grey-light;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+        @include hover {
+            background: $grey-nav;
+        }
+	}
+	.uk-slider-nav {
+		margin-top: 30px;
+		li {
+			padding-left: 15px;
+		}
+		a {
+			border-color: $orange;
+			height: 15px;
+			width: 15px;
+			@include hover {
+				background: $orange;    
+			}
+		}
+		.uk-active a {
+			background: $orange;
+		}
+	}
+	@media (max-width: $breakpointLarge) {
+		padding-bottom: 65px;
+		.subtitle {
+			font-size: 18px;
+		}
+	}
+}

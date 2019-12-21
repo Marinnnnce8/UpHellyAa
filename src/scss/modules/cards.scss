@@ -1,0 +1,103 @@
+.uk-card-video {
+	overflow: hidden;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	.uk-card-media {
+		height: 0;
+		padding-bottom: 70%;
+		position: relative;
+		overflow: hidden;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	.uk-label {
+        background: $orange;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+        margin-left: 20px;
+        min-height: 35px;
+        display: inline-flex;
+        align-items: center;
+        text-transform: none;
+	}
+	.uk-card-body {
+		background-color: $beige;
+		padding: 35px 35px 20px;
+		position: relative;
+	}
+	.uk-card-title {
+        font-family: $font-bold;
+        line-height: 1.2;
+        max-width: 265px;
+        margin-bottom: 10px;
+		a {
+            color: $grey-darker;
+            font-size: 20px;
+		}
+    }
+    .font-time {
+        position: relative;
+        color: $grey-darker;
+        font-family: $font-bold;
+        font-size: 13px;
+        padding-left: 17px;
+        &::before {
+            position: absolute;
+            left: 0;
+            width: 12px;
+            color: $grey-darker;
+            top: 1px;
+        }
+    }
+	.play-embelish {
+		position: absolute;
+		top: -51px;
+		left: 10px;
+		text-align: center;
+		padding: 25px;
+		background: url('../img/play-btn-wrapper.svg') no-repeat;
+		background-size: contain;
+		background-position: center;
+		z-index: 1;
+		i {
+			font-size: 25px;
+			color: $white;
+			line-height: 52px;
+			background-color: $beige;
+			border-radius: 100%;
+			width: 51px;
+			height: 51px;
+			display: block;
+			transition: $nbSec ease-in-out;
+		}
+
+		// &:hover {
+		// 	i {
+		// 		background-color: darken($c-green, 10%);
+		// 	}
+		// }
+	}
+
+	.read-more {
+		.icon-play-button {
+			color: #fff;
+			font-size: 74px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		&:hover {
+			.icon-play-button {
+				opacity: 1;
+			}
+		}
+    }
+}

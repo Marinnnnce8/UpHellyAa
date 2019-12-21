@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	color: $white;
+	font-family: $font-default;
+	font-size: 16px;
+	overflow-x: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.scroll-btn-wrap {
+	min-height: 110px;
+	position: absolute;
+	bottom: 0;
+	transform: translate(-50%, 50%);
+	left: 50%;
+	width: 110px;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 50%;
+		display: block;
+		content: font-char($corner);
+		font-family: 'svgicons';
+		font-size: 20px;
+	}
+
+	&::before {
+		right: 100%;
+		transform: rotate(-180deg) translateY(17%);
+	}
+
+	&::after {
+		left: 100%;
+		transform: rotate(90deg) translateX(-25%);
+	}
+}
+
+.scroll-btn-wrap--black {
+	border-radius: 15px;
+	background: $black;
+
+	&::before,
+	&::after {
+		color: $black;
+	}
+}
+
+.scroll-btn-wrap--beige {
+	border-radius: 15px;
+	background: $white-dirty;
+
+	&::before,
+	&::after {
+		color: $white-dirty;
+	}
+}
+
+
+// Theming and colors iterator
+@each $colors-name in $site-colors {
+	$name: nth($colors-name, 1);
+	$color: nth($colors-name, 2);
+
+	.bg-#{$name} {
+		background-color: $color;
+	}
+
+	.color-#{$name} {
+		color: $color;
+	}
+}

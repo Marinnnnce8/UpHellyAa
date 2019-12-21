@@ -1,0 +1,97 @@
+.instagram-section {
+    padding: 100px 0;
+
+    h2 {
+        color: $grey-nav;
+        font-size: 27px;
+        margin-bottom: 40px;
+
+        a {
+            color: $blue;
+            position: relative;
+            padding-right: 50px;
+
+            &::before {
+                position: absolute;
+                right: 0;
+                bottom: 8px;
+                width: 35px;
+            }
+        }
+    }
+    @media (max-width: $breakpointLarge) {
+        padding: 60px 0 65px;
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.instagram-grid {
+    margin-left: -30px;
+
+    >* {
+        padding-left: 30px;
+    }
+
+    a {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        height: 0;
+        border-radius: 10px;
+        transition: $nbSec ease-in-out;
+        padding-top: 100%;
+        >span {
+            position: absolute;
+            font-family: $font-bold;
+            font-size: 26px;
+            left: 25px;
+            bottom: 30px;
+        }
+
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
+
+    a+a {
+        margin-top: 30px;
+    }
+
+    @media (max-width: $breakpointLarge) {
+        margin-left: -20px;
+
+        >* {
+            padding-left: 20px;
+        }
+
+        *+.uk-grid-margin,
+        .uk-grid+.uk-grid,
+        .uk-grid>.uk-grid-margin {
+            margin-top: 20px;
+        }
+
+        a+a {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        margin-left: -12px;
+
+        >* {
+            padding-left: 12px;
+            margin-top: 12px;
+        }
+
+        a+a {
+            margin-top: 12px;
+        }
+        *+.uk-grid-margin,
+        .uk-grid+.uk-grid,
+        .uk-grid>.uk-grid-margin {
+            margin-top: 12px;
+        }
+    }
+}

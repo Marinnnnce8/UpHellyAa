@@ -1,0 +1,55 @@
+$font-path: "../fonts";
+
+/* Book */
+@font-face {
+	font-family: 'ClanPro';
+	src: url('#{$font-path}/ClanProBook.woff2') format('woff2'),
+	url('#{$font-path}/ClanProBook.woff') format('woff'),
+	url('#{$font-path}/ClanProBook.ttf') format('truetype');
+	font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* News */
+@font-face {
+	font-family: 'ClanPro News';
+	src: url('#{$font-path}/ClanProNews.woff2') format('woff2'),
+	url('#{$font-path}/ClanProNews.woff') format('woff'),
+	url('#{$font-path}/ClanProNews.ttf') format('truetype');
+	font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+	font-family: 'ClanPro Bold';
+	src: url('#{$font-path}/ClanProBold.woff2') format('woff2'),
+	url('#{$font-path}/ClanProBold.woff') format('woff'),
+	url('#{$font-path}/ClanProBold.ttf') format('truetype');
+	font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Ultra*/
+@font-face {
+	font-family: 'ClanPro Ultra';
+	src: url('#{$font-path}/ClanProUltra.woff2') format('woff2'),
+	url('#{$font-path}/ClanProUltra.woff') format('woff'),
+	url('#{$font-path}/ClanProUltra.ttf') format('truetype');
+	font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('#{$font-path}/Georgia.woff2') format('woff2'),
+        url('#{$font-path}/Georgia.woff') format('woff'),
+        url('#{$font-path}/Georgia.ttf') format('truetype');
+    font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

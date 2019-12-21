@@ -1,0 +1,52 @@
+a,
+button {
+	appearance: none;
+	outline: none;
+	transition: .3s ease-in-out;
+	color: $white;
+	text-decoration: none;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	transition: $nbSec ease-in-out;
+}
+
+.uk-button {
+	position: relative;
+	cursor: pointer;
+	border: 2px solid $white;
+	border-radius: 50%;
+	height: 50px;
+	padding: 0;
+	width: 50px;
+
+	svg {
+		width: 50px;
+		position: absolute;
+		top: 50%;
+		left: 48%;
+		transform: translate(-50%, -50%);
+	}
+
+	@include hover {
+		color: $white;
+	}
+
+	@media (max-width: $breakpointLarge) {
+		font-size: 12px;
+	}
+
+	@media (max-width: $breakpointMedium) {
+
+		.uk-icon {
+			right: 5px;
+		}
+	}
+}
