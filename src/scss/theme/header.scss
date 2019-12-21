@@ -1,14 +1,18 @@
 .header {
 	nav {
+		padding-top: 20px;
 		width: 100%;
 
-		>a {
+		>a:first-of-type,
+		>a:last-of-type {
 			font-size: 25px;
 			font-family: $font-ultra;
 		}
 	}
 
 	ul {
+		margin: 0;
+
 		li {
 			a {
 				font-size: 15px;
@@ -53,4 +57,63 @@
 		}
 	}
 
+	@media (max-width: $breakpointLarge) {
+		nav {
+			padding-right: 110px;
+			position: relative;
+
+			>button {
+				font-family: $font-bold;
+				font-size: 15px;
+				color: $white;
+				position: absolute;
+				padding: 0;
+				right: 0;
+
+				span {
+					background: $white;
+					display: inline-block;
+					border-radius: 50%;
+					margin-left: 10px;
+					height: 42px;
+					position: relative;
+					width: 42px;
+
+					svg {
+						color: $black;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		nav {
+			padding-right: 45px;
+
+			>a {
+				&:last-of-type {
+					font-family: $font-ultra;
+					font-size: 18px;
+				}
+			}
+			>button {
+				font-size: 0;
+
+				span {
+					height: 38px;
+					width: 38px;
+				}
+			}
+		}
+
+		.social a {
+			width: 38px;
+			height: 38px;
+		}
+	}
 }

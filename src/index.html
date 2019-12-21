@@ -20,30 +20,35 @@
 </head>
 
 <body class="mm-wrapper">
-	<nav id="menu"
-		class="uk-hidden@l uk-width-1-1 main-nav-mobile mm-menu mm-menu_offcanvas mm-menu_fx-listitems-slide mm-menu_fullscreen mm-menu_fx-panels-slide-100 mm-menu_opened">
+	<nav class="uk-hidden@l main-nav-mobile mm-menu">
 
-		<button class="uk-navbar-toggle uk-active"></button>
+		<button class="uk-navbar-toggle uk-position-right" id="nav-close-btn" data-uk-icon="close"
+			aria-label="Click here to close navigation"></button>
 		<div class="mm-panel">
 			<ul class="mm-listview">
-				<li class="mm-listitem"><a href="#"
-						class="uk-text-uppercase uk-position-relative uk-padding-small">Schedule</a>
+				<li class="mm-listitem"><a href="#" data-uk-scroll
+						class="uk-text-uppercase uk-position-relative uk-padding"
+						data-uk-icon="chevron-right">Schedule</a>
 				</li>
-				<li class="mm-listitem"><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Live
+				<li class="mm-listitem"><a href="#" data-uk-scroll
+						class="uk-text-uppercase uk-position-relative uk-padding" data-uk-icon="chevron-right">Live
 						blog</a></li>
-				<li class="mm-listitem"><a href="#"
-						class="uk-text-uppercase uk-position-relative uk-padding-small">Videos</a>
+				<li class="mm-listitem"><a href="#" data-uk-scroll
+						class="uk-text-uppercase uk-position-relative uk-padding"
+						data-uk-icon="chevron-right">Videos</a>
 				</li>
-				<li class="mm-listitem"><a href="#"
-						class="uk-text-uppercase uk-position-relative uk-padding-small">About
-						festival</a>
-				</li>
-				<li class="mm-listitem"><a href="#"
-						class="uk-text-uppercase uk-position-relative uk-padding-small">Gallery</a>
-				</li>
-				<li class="mm-listitem"><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Live
+				<li class="mm-listitem"><a href="#" data-uk-scroll
+						class="uk-text-uppercase uk-position-relative uk-padding" data-uk-icon="chevron-right">Live
 						work
 						study</a>
+				</li>
+				<li class="mm-listitem"><a href="#" data-uk-scroll
+						class="uk-text-uppercase uk-position-relative uk-padding"
+						data-uk-icon="chevron-right">Gallery</a>
+				</li>
+				<li class="mm-listitem"><a href="#" data-uk-scroll
+						class="uk-text-uppercase uk-position-relative uk-padding" data-uk-icon="chevron-right">About
+						festival</a>
 				</li>
 			</ul>
 		</div>
@@ -52,20 +57,27 @@
 		<header class="header uk-position-absolute uk-position-z-index uk-width-1-1">
 			<div class="uk-container uk-container-expand">
 				<nav class="uk-flex uk-flex-between uk-flex-middle">
-					<a href="#">UpHellyAa.com</a>
-					<a href="#" class="uk-hidden@l uk-navbar-toggle" id="my-nav-btn" data-uk-icon="menu"
-						aria-label="Click here to open navigation"></a>
+					<a href="#" class="uk-visible@s">UpHellyAa.com</a>
+					<a href="#" class="uk-hidden@s">UpHellyAa</a>
+					<button class="uk-hidden@l uk-navbar-toggle uk-text-uppercase" id="nav-open-btn">Menu<span
+							data-uk-icon="menu" role="presentation"></span></button>
 					<ul class="uk-flex uk-flex-between uk-visible@l">
-						<li><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Schedule</a>
+						<li><a data-uk-scroll href="#schedule"
+								class="uk-text-uppercase uk-position-relative uk-padding-small">Schedule</a>
 						</li>
-						<li><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Live blog</a>
+						<li><a data-uk-scroll href="#instagram-blog"
+								class="uk-text-uppercase uk-position-relative uk-padding-small">Live blog</a>
 						</li>
-						<li><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Videos</a></li>
-						<li><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">About
+						<li><a data-uk-scroll href="#highlights"
+								class="uk-text-uppercase uk-position-relative uk-padding-small">Videos</a></li>
+						<li><a data-uk-scroll href="#about-festival"
+								class="uk-text-uppercase uk-position-relative uk-padding-small">About
 								festival</a>
 						</li>
-						<li><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Gallery</a></li>
-						<li><a href="#" class="uk-text-uppercase uk-position-relative uk-padding-small">Live work
+						<li><a data-uk-scroll href="#gallery"
+								class="uk-text-uppercase uk-position-relative uk-padding-small">Gallery</a></li>
+						<li><a data-uk-scroll href="#live-work"
+								class="uk-text-uppercase uk-position-relative uk-padding-small">Live work
 								study</a>
 						</li>
 					</ul>
@@ -77,152 +89,142 @@
 						<a href="#" class="font-instagram-logo uk-position-relative uk-margin-small-left"
 							aria-label="Click here to visit our instagram page" target="_blank"></a>
 					</div>
-				</nav>
+					</button>
 			</div>
 		</header>
 
 
 		<main>
 			<section class="banner uk-background-cover" style="background-image: url('./img/banner.jpg');">
-				<div class="uk-container uk-container-expand">
-					<div class="uk-text-center">
-						<h1>Shetland's Festivals of Fire</h1>
-						<span class="subtitle">Festival Season Between January & March 2020</span>
-					</div>
-					<div class="uk-container uk-container-expand">
+				<div class="uk-container uk-container-expand banner-inner">
+						<div class="uk-text-center">
+							<h1>Shetland's Festivals of Fire</h1>
+							<span class="subtitle">Festival Season Between January & March 2020</span>
+						</div>
+						<div class="uk-container uk-container-expand">
 
-						<div class="uk-position-relative uk-margin-small-top" tabindex="-1" data-uk-slider>
-
-							<div class="uk-slider-container">
-								<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l" data-uk-grid
-									data-uk-height-match="target: > li > .uk-card > .uk-card-body">
-									<li>
-										<div class="uk-card uk-card-video">
-											<div class="uk-card-media">
-												<img alt="video" data-uk-cover data-uk-img src="./img/video_img_1.jpg">
-												<div class="uk-position-cover">
-													<span class="uk-label">Videos</span>
+							<div class="uk-position-relative uk-margin-small-top" tabindex="-1" data-uk-slider>
+								<div class="uk-slider-container">
+									<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l" data-uk-grid
+										data-uk-height-match="target: > li > .uk-card > .uk-card-body">
+										<li>
+											<div class="uk-card uk-card-video">
+												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+													aria-label="Click to play video"></button>
+												<div class="uk-card-media">
+													<img alt="video" data-uk-cover data-uk-img
+														src="./img/video_img_1.jpg">
+													<div class="uk-position-cover">
+														<span class="uk-label">Videos</span>
+													</div>
 												</div>
-												<a href="https://youtu.be/aU_FifLTyvs" data-fancybox class="read-more"
-													aria-label="View Video"><i class="icon-play-button"></i></a>
-											</div>
-											<div class="uk-card-body">
-												<h3 class="uk-card-title"><a data-fancybox
-														href="https://youtu.be/aU_FifLTyvs">South Mainland Up Helly Aa
-														2020</a></h3>
-												<span class="font-time">22 min</span>
-												<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-													class="play-embelish" aria-label="Play"><i
-														class="icon-play-button"></i></a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="uk-card uk-card-video">
-											<div class="uk-card-media">
-												<img alt="Watch Petr" data-uk-cover data-uk-img
-													src="./img/video_img_2.jpg">
-												<div class="uk-position-cover">
-													<span class="uk-label">Videos</span>
+												<div class="uk-card-body">
+													<h3 class="uk-card-title">South Mainland Up Helly Aa
+														2020</h3>
+													<span class="font-time">22 min</span>
+													<span class="play-embelish" role="presentation"><span
+															class="icon-play-button"></span></span>
 												</div>
-												<a data-fancybox href="https://youtu.be/pmi0ysU23dY" class="read-more"
-													aria-label="View Video"><i class="icon-play-button"></i></a>
 											</div>
-											<div class="uk-card-body">
-												<h3 class="uk-card-title"><a data-fancybox
-														href="https://youtu.be/pmi0ysU23dY">South Mainland Up Helly Aa
-														2020</a></h3>
-												<span class="font-time">22 min</span>
-												<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-													class="play-embelish" aria-label="Play"><i
-														class="icon-play-button"></i></a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="uk-card uk-card-video">
-											<div class="uk-card-media">
-												<img alt="Watch Luke's Story" data-uk-cover data-uk-img
-													src="./img/video_img_3.jpg">
-												<div class="uk-position-cover">
-													<span class="uk-label">Videos</span>
+										</li>
+										<li>
+											<div class="uk-card uk-card-video">
+												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+													aria-label="Click to play video"></button>
+												<div class="uk-card-media">
+													<img alt="Watch Petr" data-uk-cover data-uk-img
+														src="./img/video_img_2.jpg">
+													<div class="uk-position-cover">
+														<span class="uk-label">Videos</span>
+													</div>
 												</div>
-												<a data-fancybox href="https://youtu.be/qHvGC1HbwAo" class="read-more"
-													aria-label="View Video"><i class="icon-play-button"></i></a>
-											</div>
-											<div class="uk-card-body">
-												<h3 class="uk-card-title"><a data-fancybox
-														href="https://youtu.be/qHvGC1HbwAo">South Mainland Up Helly Aa
-														2020</a></h3>
-												<span class="font-time">22 min</span>
-												<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-													class="play-embelish" aria-label="Play"><i
-														class="icon-play-button"></i></a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="uk-card uk-card-video">
-											<div class="uk-card-media">
-												<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
-													src="./img/video_img_4.jpg">
-												<div class="uk-position-cover">
-													<span class="uk-label">Videos</span>
+												<div class="uk-card-body">
+													<h3 class="uk-card-title">South Mainland Up Helly Aa
+														2020</h3>
+													<span class="font-time">22 min</span>
+													<span class="play-embelish" role="presentation"><span
+															class="icon-play-button"></span></span>
 												</div>
-												<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg" class="read-more"
-													aria-label="View Video"><i class="icon-play-button"></i></a>
 											</div>
-											<div class="uk-card-body">
-												<h3 class="uk-card-title"><a data-fancybox
-														href="https://youtu.be/WGp2SeAc-Rg">South Mainland Up Helly Aa
-														2020</a></h3>
-												<span class="font-time">22 min</span>
-												<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-													class="play-embelish" aria-label="Play"><i
-														class="icon-play-button"></i></a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="uk-card uk-card-video">
-											<div class="uk-card-media">
-												<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
-													src="./img/video_img_1.jpg">
-												<div class="uk-position-cover">
-													<span class="uk-label uk-label-success">Videos</span>
+										</li>
+										<li>
+											<div class="uk-card uk-card-video">
+												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+													aria-label="Click to play video"></button>
+												<div class="uk-card-media">
+													<img alt="Watch Luke's Story" data-uk-cover data-uk-img
+														src="./img/video_img_3.jpg">
+													<div class="uk-position-cover">
+														<span class="uk-label">Videos</span>
+													</div>
 												</div>
-												<a data-fancybox href="https://youtu.be/jB18fsMMGrM" class="read-more"
-													aria-label="View Video"><i class="icon-play-button"></i></a>
+												<div class="uk-card-body">
+													<h3 class="uk-card-title">South Mainland Up Helly Aa
+														2020</h3>
+													<span class="font-time">22 min</span>
+													<span class="play-embelish" role="presentation"><span
+															class="icon-play-button"></span></span>
+												</div>
 											</div>
-											<div class="uk-card-body">
-												<h3 class="uk-card-title"><a data-fancybox
-														href="https://youtu.be/jB18fsMMGrM">South Mainland Up Helly Aa
-														2020</a></h3>
-												<span class="font-time">22 min</span>
-												<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-													class="play-embelish" aria-label="Play"><i
-														class="icon-play-button"></i></a>
+										</li>
+										<li>
+											<div class="uk-card uk-card-video">
+												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+													aria-label="Click to play video"></button>
+												<div class="uk-card-media">
+													<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
+														src="./img/video_img_4.jpg">
+													<div class="uk-position-cover">
+														<span class="uk-label">Videos</span>
+													</div>
+												</div>
+												<div class="uk-card-body">
+													<h3 class="uk-card-title">South Mainland Up Helly Aa
+														2020</h3>
+													<span class="font-time">22 min</span>
+													<span class="play-embelish" role="presentation"><span
+															class="icon-play-button"></span></span>
+												</div>
 											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-hidden@l"></ul>
-							<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
-								<a href="#" data-uk-slider-item="previous" data-uk-slidenav-previous
-									aria-label="Previous slide"></a>
-								<a href="#" data-uk-slider-item="next" data-uk-slidenav-previous
-									aria-label="Next slide"></a>
+										</li>
+										<li>
+											<div class="uk-card uk-card-video">
+												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+													aria-label="Click to play video"></button>
+												<div class="uk-card-media">
+													<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
+														src="./img/video_img_1.jpg">
+													<div class="uk-position-cover">
+														<span class="uk-label uk-label-success">Videos</span>
+													</div>
+												</div>
+												<div class="uk-card-body">
+													<h3 class="uk-card-title">South Mainland Up Helly Aa
+														2020</h3>
+													<span class="font-time">22 min</span>
+													<span class="play-embelish" role="presentation"><span
+															class="icon-play-button"></span></span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-hidden@l"></ul>
+								<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
+									<button data-uk-slider-item="previous" data-uk-slidenav-previous
+										aria-label="Previous slide"></button>
+									<button data-uk-slider-item="next" data-uk-slidenav-previous
+										aria-label="Next slide"></button>
+								</div>
 							</div>
 						</div>
-					</div>
 				</div>
 				<div class="scroll-btn-wrap scroll-btn-wrap--black uk-flex uk-flex-middle uk-flex-center">
-					<button class="uk-button" data-uk-icon="arrow-down"
-						aria-label="Click to slide to next section"></button>
+					<a href="#schedule" class="uk-button" data-uk-scroll data-uk-icon="arrow-down"
+						aria-label="Click to slide to next section"></a>
 				</div>
 			</section>
-			<section class="schedule-section">
+			<section class="schedule-section" id="schedule">
 				<div class="uk-container uk-container-expand">
 					<h2 class="uk-text-center">Fire Festival Season 2020</h2>
 					<div class="uk-child-width-1-6@l uk-child-width-1-3@s uk-child-width-1-1 uk-grid-medium"
@@ -326,7 +328,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="instagram-section">
+			<section class="instagram-section" id="instagram-blog">
 				<div class="uk-container uk-container-expand">
 					<h2 class="uk-text-center">Fire Festival Season 2020 <a href="#" class="font-instagram-logo"
 							aria-label="Click here to visit our instagram page">@promoteshetland</a></h2>
@@ -360,7 +362,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="highlights-section">
+			<section class="highlights-section" id="highlights">
 				<h2 class="uk-text-center">Highlights and Videos</h2>
 				<div class="uk-container uk-container-expand">
 					<div class="highlights-inner">
@@ -374,12 +376,14 @@
 								<div class="highlights-slider uk-position-relative uk-margin-small-top" tabindex="-1"
 									data-uk-slider>
 
-									<div class="uk-slider-container">
+									<div class="uk-slider-container uk-position-relative">
 										<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l"
 											data-uk-grid data-uk-height-match="target: > li > .uk-card > .uk-card-body">
 											<li>
 												<div class="uk-card uk-card-video">
-													<button data-uk-toggle="target: #my-id"></button>
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
+													<!-- <button data-uk-toggle="target: #my-id"></button> -->
 													<div id="my-id" data-uk-modal>
 														<div class="uk-modal-dialog uk-modal-body">
 															<iframe src="https://www.youtube.com/embed/soRjcajliHE"
@@ -391,129 +395,233 @@
 														<img alt="video" data-uk-cover data-uk-img
 															src="./img/highlights_video_1.jpg">
 														<div class="uk-position-cover">
-															<span class="uk-label">Videos</span>
+															<span class="uk-label">Highlights</span>
 														</div>
-														<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/aU_FifLTyvs">Leanna and Zoe's
-																visit
-																to Bressay Up Helly Aa</a></h3>
+														<h3 class="uk-card-title">Leanna and Zoe's
+															visit
+															to Bressay Up Helly Aa</h3>
 														<span class="font-time">22 min</span>
-														<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Petr" data-uk-cover data-uk-img
 															src="./img/highlights_video_2.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/pmi0ysU23dY">Scalloway Fire
-																Festival
-																2020, Shetland</a></h3>
+														<h3 class="uk-card-title">Scalloway Fire
+															Festival
+															2020, Shetland</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Luke's Story" data-uk-cover data-uk-img
 															src="./img/highlights_video_3.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/qHvGC1HbwAo">Evening procession
-																at
-																Lerwick Up Helly Aa 2020</a></h3>
+														<h3 class="uk-card-title">Evening procession
+															at
+															Lerwick Up Helly Aa 2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
 															src="./img/highlights_video_4.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/WGp2SeAc-Rg">Your 4 minute tour
-																of
-																Lerwick Up Helly Aa 2020</a></h3>
+														<h3 class="uk-card-title">Your 4 minute tour
+															of
+															Lerwick Up Helly Aa 2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
 															src="./img/highlights_video_1.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label uk-label-success">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/jB18fsMMGrM">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 										</ul>
 									</div>
+									<button class="uk-position-center-left uk-position-small uk-hidden-hover"
+										uk-slidenav-previous uk-slider-item="previous"></button>
+									<button class="uk-position-center-right uk-position-small uk-hidden-hover"
+										uk-slidenav-next uk-slider-item="next"></button>
+									<ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+								</div>
+							</li>
+							<li>
+								<div class="highlights-slider uk-position-relative uk-margin-small-top" tabindex="-1"
+									data-uk-slider>
 
-									<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
-										<a href="#" data-uk-slider-item="previous" data-uk-slidenav-previous
-											aria-label="Previous slide"></a>
-										<a href="#" data-uk-slider-item="next" data-uk-slidenav-previous
-											aria-label="Next slide"></a>
+									<div class="uk-slider-container">
+										<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l"
+											data-uk-grid data-uk-height-match="target: > li > .uk-card > .uk-card-body">
+											<li>
+												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
+													<div class="uk-card-media">
+														<img alt="Watch Petr" data-uk-cover data-uk-img
+															src="./img/video_img_1.jpg">
+														<div class="uk-position-cover">
+															<span class="uk-label">Videos</span>
+														</div>
+													</div>
+													<div class="uk-card-body">
+														<h3 class="uk-card-title">Leanna and Zoe's
+															visit to Bressay Up Helly Aa</h3>
+														<span class="font-time">22 min</span>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
+													<div class="uk-card-media">
+														<img alt="Watch Petr" data-uk-cover data-uk-img
+															src="./img/video_img_2.jpg">
+														<div class="uk-position-cover">
+															<span class="uk-label">Videos</span>
+														</div>
+													</div>
+													<div class="uk-card-body">
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
+														<span class="font-time">22 min</span>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
+													<div class="uk-card-media">
+														<img alt="Watch Luke's Story" data-uk-cover data-uk-img
+															src="./img/video_img_3.jpg">
+														<div class="uk-position-cover">
+															<span class="uk-label">Videos</span>
+														</div>
+													</div>
+													<div class="uk-card-body">
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
+														<span class="font-time">22 min</span>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
+													<div class="uk-card-media">
+														<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
+															src="./img/video_img_4.jpg">
+														<div class="uk-position-cover">
+															<span class="uk-label">Videos</span>
+														</div>
+													</div>
+													<div class="uk-card-body">
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
+														<span class="font-time">22 min</span>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
+													<div class="uk-card-media">
+														<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
+															src="./img/video_img_1.jpg">
+														<div class="uk-position-cover">
+															<span class="uk-label uk-label-success">Videos</span>
+														</div>
+													</div>
+													<div class="uk-card-body">
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
+														<span class="font-time">22 min</span>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<button class="uk-position-center-left uk-position-small uk-hidden-hover"
+											uk-slidenav-previous uk-slider-item="previous"></button>
+										<button class="uk-position-center-right uk-position-small uk-hidden-hover"
+											uk-slidenav-next uk-slider-item="next"></button>
 									</div>
 									<ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
 								</div>
@@ -527,281 +635,119 @@
 											data-uk-grid data-uk-height-match="target: > li > .uk-card > .uk-card-body">
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="video" data-uk-cover data-uk-img
 															src="./img/video_img_1.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/aU_FifLTyvs">South Mainland Up
-																Helly
-																Aa
-																20200000</a></h3>
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2021</h3>
 														<span class="font-time">22 min</span>
-														<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Petr" data-uk-cover data-uk-img
 															src="./img/video_img_2.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/pmi0ysU23dY">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Luke's Story" data-uk-cover data-uk-img
 															src="./img/video_img_3.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/qHvGC1HbwAo">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
 															src="./img/video_img_4.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/WGp2SeAc-Rg">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 											<li>
 												<div class="uk-card uk-card-video">
+													<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+														aria-label="Click to play video"></button>
 													<div class="uk-card-media">
 														<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
 															src="./img/video_img_1.jpg">
 														<div class="uk-position-cover">
 															<span class="uk-label uk-label-success">Videos</span>
 														</div>
-														<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
 													</div>
 													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/jB18fsMMGrM">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
+														<h3 class="uk-card-title">South Mainland Up
+															Helly
+															Aa
+															2020</h3>
 														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
+														<span class="play-embelish" role="presentation"><span
+																class="icon-play-button"></span></span>
 													</div>
 												</div>
 											</li>
 										</ul>
-									</div>
-
-									<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
-										<a href="#" data-uk-slider-item="previous" data-uk-slidenav-previous
-											aria-label="Previous slide"></a>
-										<a href="#" data-uk-slider-item="next" data-uk-slidenav-previous
-											aria-label="Next slide"></a>
-									</div>
-									<ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
-								</div>
-							</li>
-							<li>
-								<div class="highlights-slider uk-position-relative uk-margin-small-top" tabindex="-1"
-									data-uk-slider>
-
-									<div class="uk-slider-container">
-										<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l"
-											data-uk-grid data-uk-height-match="target: > li > .uk-card > .uk-card-body">
-											<li>
-												<div class="uk-card uk-card-video">
-													<div class="uk-card-media">
-														<img alt="video" data-uk-cover data-uk-img
-															src="./img/video_img_1.jpg">
-														<div class="uk-position-cover">
-															<span class="uk-label">Videos</span>
-														</div>
-														<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
-													</div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/aU_FifLTyvs">South Mainland Up
-																Helly
-																Aa
-																2021</a></h3>
-														<span class="font-time">22 min</span>
-														<a href="https://youtu.be/aU_FifLTyvs" data-fancybox
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="uk-card uk-card-video">
-													<div class="uk-card-media">
-														<img alt="Watch Petr" data-uk-cover data-uk-img
-															src="./img/video_img_2.jpg">
-														<div class="uk-position-cover">
-															<span class="uk-label">Videos</span>
-														</div>
-														<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
-													</div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/pmi0ysU23dY">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
-														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/pmi0ysU23dY"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="uk-card uk-card-video">
-													<div class="uk-card-media">
-														<img alt="Watch Luke's Story" data-uk-cover data-uk-img
-															src="./img/video_img_3.jpg">
-														<div class="uk-position-cover">
-															<span class="uk-label">Videos</span>
-														</div>
-														<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
-													</div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/qHvGC1HbwAo">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
-														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/qHvGC1HbwAo"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="uk-card uk-card-video">
-													<div class="uk-card-media">
-														<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
-															src="./img/video_img_4.jpg">
-														<div class="uk-position-cover">
-															<span class="uk-label">Videos</span>
-														</div>
-														<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
-													</div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/WGp2SeAc-Rg">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
-														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/WGp2SeAc-Rg"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="uk-card uk-card-video">
-													<div class="uk-card-media">
-														<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
-															src="./img/video_img_1.jpg">
-														<div class="uk-position-cover">
-															<span class="uk-label uk-label-success">Videos</span>
-														</div>
-														<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-															class="read-more" aria-label="View Video"><i
-																class="icon-play-button"></i></a>
-													</div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title"><a data-fancybox
-																href="https://youtu.be/jB18fsMMGrM">South Mainland Up
-																Helly
-																Aa
-																2020</a></h3>
-														<span class="font-time">22 min</span>
-														<a data-fancybox href="https://youtu.be/jB18fsMMGrM"
-															class="play-embelish" aria-label="Play"><i
-																class="icon-play-button"></i></a>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-
-									<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
-										<a href="#" data-uk-slider-item="previous" data-uk-slidenav-previous
-											aria-label="Previous slide"></a>
-										<a href="#" data-uk-slider-item="next" data-uk-slidenav-previous
-											aria-label="Next slide"></a>
+										<button class="uk-position-center-left uk-position-small uk-hidden-hover"
+											uk-slidenav-previous uk-slider-item="previous"></button>
+										<button class="uk-position-center-right uk-position-small uk-hidden-hover"
+											uk-slidenav-next uk-slider-item="next"></button>
 									</div>
 									<ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
 								</div>
@@ -829,7 +775,7 @@
 							and Working in Shetland Facebook group</a></span>
 				</div>
 			</section>
-			<section class="links-section">
+			<section class="links-section" id="live-work">
 				<div class="uk-container">
 					<h2 class="uk-text-center">Find out more about Shetland</h2>
 					<div class="uk-flex instagram-grid" data-uk-grid>
@@ -854,11 +800,11 @@
 					</div>
 				</div>
 				<div class="scroll-btn-wrap scroll-btn-wrap--beige uk-flex uk-flex-middle uk-flex-center">
-					<button class="uk-button" data-uk-icon="arrow-down"
-						aria-label="Click to slide to next section"></button>
+					<a href="#about-festival" class="uk-button" data-uk-scroll class="uk-button"
+						data-uk-icon="arrow-down" aria-label="Click to slide to next section"></a>
 				</div>
 			</section>
-			<section class="about-section">
+			<section class="about-section" id="about-festival">
 				<div class="uk-container">
 					<h2 class="uk-text-center">About Up Helly Aa Shetland's Fire Festival Season</h2>
 					<span class="uk-margin-auto uk-text-center" data-uk-icon="arrow-down">Shetland's Up Helly Aa
@@ -878,7 +824,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="media-section">
+			<section class="media-section" id="gallery">
 				<div class="uk-container uk-container-expand">
 					<h2 class="uk-text-center">Latest Social Media Activity</h2>
 					<div class="uk-flex">
@@ -936,7 +882,7 @@
 			onClick: {
 				close: !0
 			},
-			extensions: ["fx-menu-slide", "fx-listitems-slide", "fullscreen", "fx-panels-slide-100", "theme-dark", "position-right"],
+			extensions: ["fx-listitems-slide", "fullscreen", "fx-panels-slide-100"],
 		}, {
 			classNames: {
 				panel: "Panel",
@@ -944,20 +890,20 @@
 			}
 		});
 		var menuAPI = menu.API;
-		document.querySelector("#my-nav-btn").addEventListener(
-			"click", (evnt) => {
-				evnt.preventDefault();
-				if (event.target.classList.contains('uk-active')) {
-					console.log('akak');
-					menuAPI.close();
-				} else {
-					menuAPI.open();
-					console.log('a333kak');
-				}
+		document.querySelector("#nav-open-btn").addEventListener(
+			"click", () => {
+				menuAPI.open();
+			}
+		);
+		document.querySelector("#nav-close-btn").addEventListener(
+			"click", () => {
+				menuAPI.close();
 			}
 		);
 	}
-	navigation();
+	window.addEventListener("load", function () {
+		navigation();
+	});
 
 </script>
 

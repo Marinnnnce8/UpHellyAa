@@ -4,8 +4,9 @@
 	padding: 445px 0 75px;
 	.subtitle {
 		font-size: 21px;
-		font-weight: 700;
-		font-family: $font-georgia;
+		font-family: $georgia-bold;
+		display: block;
+		margin-bottom: 40px;
 	}
 	.uk-slidenav {
         background: $black;
@@ -50,5 +51,22 @@
 		.subtitle {
 			font-size: 18px;
 		}
+	}
+	@media (max-width: $breakpointSmall) {
+		.subtitle {
+			font-size: 16px;
+		}
+	}
+}
+
+.banner-inner {
+	position: absolute;
+	bottom: 70px;
+	left: 30px;
+	padding: 0;
+	width: calc(100% - 60px);
+	@media (max-width: $breakpointSmall) {
+		left: 15px;
+		width: calc(100% - 30px);
 	}
 }

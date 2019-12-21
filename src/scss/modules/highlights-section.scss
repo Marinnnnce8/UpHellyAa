@@ -1,28 +1,36 @@
 .highlights-section {
     background: $grey-nav;
     padding-top: 75px;
+
     h2 {
         margin-bottom: 30px;
     }
+
     .uk-slider-nav {
         margin-top: 55px;
+
         li {
             padding-left: 17px;
         }
+
         a {
             border-color: $orange;
             height: 15px;
             width: 15px;
+
             @include hover {
-                background: $orange;    
+                background: $orange;
             }
         }
+
         .uk-active a {
             background: $orange;
         }
     }
+
     @media (max-width: $breakpointLarge) {
         padding: 75px 0 40px;
+
         .uk-slider-nav {
             margin-top: 40px;
         }
@@ -32,55 +40,135 @@
 .highlights-inner {
     position: relative;
     top: 215px;
+
     @media (max-width: $breakpointLarge) {
         top: 0;
     }
 }
 
+.highlights-slider {
+    &:focus {
+        outline: 0;
+    }
+    .uk-slidenav {
+        background: $black;
+        border-radius: 50%;
+        height: 58px;
+		width: 58px;
+        transition: $nbSec ease-in-out;
+        margin: 0;
+        z-index: 3;
+		&:first-of-type {
+            transform: scale(0) translate(-50%, -50%);
+            @include hover {
+                transform: scale(1) translate(-50%, -50%);
+            }
+		}
+		&:last-of-type {
+            transform: scale(0) translate(50%, -50%);
+            @include hover {
+                transform: scale(1) translate(50%, -50%);
+            }
+		}
+        svg {
+			fill: $grey-light;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+        @include hover {
+            background: $grey-nav;
+        }
+    }
+    .uk-slider-container {
+        @include hover {
+            ~.uk-slidenav {
+                &:first-of-type {
+                    transform: scale(1) translate(-50%, -50%);
+                }
+                &:last-of-type {
+                    transform: scale(1) translate(50%, -50%);
+                }
+            } 
+        }
+    }
+}
+
 .highlights-nav {
 
-    li {
-        position: relative;
-    }
-
-    li::before,
-    li::after,
-    button::before,
-    button::after {
-        position: absolute;
-        bottom: 0;
-        content: '';
-        display: block;
-    }
-
-    li::before,
-    li::after {
-        left: -10px;
-    }
-
-    li::before {
-        // background: ;
-        width: 10px;
-        height: 10px;
-    }
-
     button {
-        font-size: 15px;
+        border-radius: 8px;
+        border: 2px solid $grey-coal-mid;
         font-family: $font-bold;
         position: relative;
+        font-size: 15px;
+        z-index: 1;
+        transition: $nbSec ease-in-out;
 
-        &::after,
+        &::before,
+        &::after {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            content: '';
+            font-size: 20px;
+        }
+    }
+
+    li:not(.uk-active) button {
+        background: $grey-nav;
+        &::before, &::after {
+            bottom: -2px;
+            border-style: solid;
+            width: 0;
+            border-width: 10px 0 0 10px;
+        }
+
         &::before {
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
-            background: #222;
-            // border: 1px solid red;
-            z-index: 2;
+            left: 98%;
+            border-color: transparent;
         }
 
         &::after {
-            left: -20px;
+            height: 0;
+            border-color: transparent;
+        }
+        @include hover {
+            background: $grey-coal-mid;
+            &::before {
+                border-color: transparent transparent transparent rgba($grey-coal-mid, .7);
+            }
+    
+            &::after {
+                border-color: transparent transparent rgba($grey-coal-mid, .7);
+            }
+        }
+    }
+
+    .uk-active {
+        z-index: 2;
+
+        button {
+            background: $grey-coal;
+
+            &::before,
+            &::after {
+                content: font-char($corner);
+                font-family: 'svgicons';
+                color: $grey-coal;
+            }
+
+            &::before {
+                left: 98%;
+                bottom: -4%;
+            }
+
+            &::after {
+                left: -15%;
+                transform: rotate(-90deg);
+                bottom: -5%;
+            }
         }
     }
 }

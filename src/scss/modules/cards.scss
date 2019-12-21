@@ -4,6 +4,9 @@
 	border-top-right-radius: 8px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	>button {
+		cursor: pointer;
+	}
 
 	.uk-card-media {
 		height: 0;
@@ -15,45 +18,51 @@
 	}
 
 	.uk-label {
-        background: $orange;
+		background: $orange;
 		border-bottom-left-radius: 4px;
 		border-bottom-right-radius: 4px;
-        margin-left: 20px;
-        min-height: 35px;
-        display: inline-flex;
-        align-items: center;
-        text-transform: none;
+		margin-left: 20px;
+		min-height: 35px;
+		font-size: 17px;
+		font-family: $font-bold;
+		display: inline-flex;
+		align-items: center;
+		text-transform: none;
 	}
+
 	.uk-card-body {
 		background-color: $beige;
 		padding: 35px 35px 20px;
 		position: relative;
 	}
+
 	.uk-card-title {
-        font-family: $font-bold;
-        line-height: 1.2;
-        max-width: 265px;
-        margin-bottom: 10px;
-		a {
-            color: $grey-darker;
-            font-size: 20px;
+		font-family: $font-bold;
+		line-height: 1.2;
+		max-width: 265px;
+		margin-bottom: 10px;
+		color: $grey-darker;
+		font-size: 20px;
+	}
+
+	.font-time {
+		position: relative;
+		color: $grey-darker;
+		font-family: $font-bold;
+		font-size: 13px;
+		padding-left: 17px;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			width: 12px;
+			color: $grey-darker;
+			top: 1px;
 		}
-    }
-    .font-time {
-        position: relative;
-        color: $grey-darker;
-        font-family: $font-bold;
-        font-size: 13px;
-        padding-left: 17px;
-        &::before {
-            position: absolute;
-            left: 0;
-            width: 12px;
-            color: $grey-darker;
-            top: 1px;
-        }
-    }
+	}
+
 	.play-embelish {
+		display: inline-block;
 		position: absolute;
 		top: -51px;
 		left: 10px;
@@ -63,16 +72,28 @@
 		background-size: contain;
 		background-position: center;
 		z-index: 1;
-		i {
+
+		span {
 			font-size: 25px;
 			color: $white;
-			line-height: 52px;
-			background-color: $beige;
+			line-height: 54px;
+			background-color: $orange;
 			border-radius: 100%;
-			width: 51px;
-			height: 51px;
+			width: 54px;
+			height: 54px;
 			display: block;
 			transition: $nbSec ease-in-out;
+			position: relative;
+
+			&::before {
+				font-family: 'svgicons';
+				content: font-char($play);
+				color: $white;
+				font-size: 25px;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 
 		// &:hover {
@@ -99,5 +120,5 @@
 				opacity: 1;
 			}
 		}
-    }
+	}
 }

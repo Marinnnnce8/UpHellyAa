@@ -53,3 +53,14 @@ $font-path: "../fonts";
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+    font-family: 'Georgia Bold';
+    src: url('#{$font-path}/Georgia-Bold.woff2') format('woff2'),
+        url('#{$font-path}/Georgia-Bold.woff') format('woff'),
+        url('#{$font-path}/Georgia-Bold.ttf') format('truetype');
+    font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
