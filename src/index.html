@@ -97,127 +97,135 @@
 		<main>
 			<section class="banner uk-background-cover" style="background-image: url('./img/banner.jpg');">
 				<div class="uk-container uk-container-expand banner-inner">
-						<div class="uk-text-center">
-							<h1>Shetland's Festivals of Fire</h1>
-							<span class="subtitle">Festival Season Between January & March 2020</span>
-						</div>
-						<div class="uk-container uk-container-expand">
-
-							<div class="uk-position-relative uk-margin-small-top" tabindex="-1" data-uk-slider>
-								<div class="uk-slider-container">
-									<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l" data-uk-grid
-										data-uk-height-match="target: > li > .uk-card > .uk-card-body">
-										<li>
-											<div class="uk-card uk-card-video">
-												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
-													aria-label="Click to play video"></button>
-												<div class="uk-card-media">
-													<img alt="video" data-uk-cover data-uk-img
-														src="./img/video_img_1.jpg">
-													<div class="uk-position-cover">
-														<span class="uk-label">Videos</span>
-													</div>
-												</div>
-												<div class="uk-card-body">
-													<h3 class="uk-card-title">South Mainland Up Helly Aa
-														2020</h3>
-													<span class="font-time">22 min</span>
-													<span class="play-embelish" role="presentation"><span
-															class="icon-play-button"></span></span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-card-video">
-												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
-													aria-label="Click to play video"></button>
-												<div class="uk-card-media">
-													<img alt="Watch Petr" data-uk-cover data-uk-img
-														src="./img/video_img_2.jpg">
-													<div class="uk-position-cover">
-														<span class="uk-label">Videos</span>
-													</div>
-												</div>
-												<div class="uk-card-body">
-													<h3 class="uk-card-title">South Mainland Up Helly Aa
-														2020</h3>
-													<span class="font-time">22 min</span>
-													<span class="play-embelish" role="presentation"><span
-															class="icon-play-button"></span></span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-card-video">
-												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
-													aria-label="Click to play video"></button>
-												<div class="uk-card-media">
-													<img alt="Watch Luke's Story" data-uk-cover data-uk-img
-														src="./img/video_img_3.jpg">
-													<div class="uk-position-cover">
-														<span class="uk-label">Videos</span>
-													</div>
-												</div>
-												<div class="uk-card-body">
-													<h3 class="uk-card-title">South Mainland Up Helly Aa
-														2020</h3>
-													<span class="font-time">22 min</span>
-													<span class="play-embelish" role="presentation"><span
-															class="icon-play-button"></span></span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-card-video">
-												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
-													aria-label="Click to play video"></button>
-												<div class="uk-card-media">
-													<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
-														src="./img/video_img_4.jpg">
-													<div class="uk-position-cover">
-														<span class="uk-label">Videos</span>
-													</div>
-												</div>
-												<div class="uk-card-body">
-													<h3 class="uk-card-title">South Mainland Up Helly Aa
-														2020</h3>
-													<span class="font-time">22 min</span>
-													<span class="play-embelish" role="presentation"><span
-															class="icon-play-button"></span></span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-card-video">
-												<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
-													aria-label="Click to play video"></button>
-												<div class="uk-card-media">
-													<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
-														src="./img/video_img_1.jpg">
-													<div class="uk-position-cover">
-														<span class="uk-label uk-label-success">Videos</span>
-													</div>
-												</div>
-												<div class="uk-card-body">
-													<h3 class="uk-card-title">South Mainland Up Helly Aa
-														2020</h3>
-													<span class="font-time">22 min</span>
-													<span class="play-embelish" role="presentation"><span
-															class="icon-play-button"></span></span>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-hidden@l"></ul>
-								<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
-									<button data-uk-slider-item="previous" data-uk-slidenav-previous
-										aria-label="Previous slide"></button>
-									<button data-uk-slider-item="next" data-uk-slidenav-previous
-										aria-label="Next slide"></button>
-								</div>
+					<div class="uk-text-center">
+						<h1>Shetland's Festivals of Fire</h1>
+						<span class="subtitle">Festival Season Between January & March 2020</span>
+					</div>
+					<div class="uk-container uk-container-expand">
+						<div id="banner-modal" data-uk-modal>
+							<div class="uk-modal-dialog uk-modal-body">
+								<iframe class="js-video" src="" width="250" height=""
+									frameborder="0" uk-video="autoplay: true"></iframe class="js-video" >
 							</div>
 						</div>
+						<div class="uk-position-relative uk-margin-small-top" tabindex="-1" data-uk-slider>
+							<div class="uk-slider-container">
+								<ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@l" data-uk-grid
+									data-uk-height-match="target: > li > .uk-card > .uk-card-body">
+									<li>
+										<div class="uk-card uk-card-video">
+											<button data-uk-toggle="target: #banner-modal" data-src="lala"
+												class="js-open-modal uk-position-cover uk-width-1-1 uk-position-z-index"
+												aria-label="Click to play video"></button>
+											<div class="uk-card-media">
+												<img alt="video" data-uk-cover data-uk-img src="./img/video_img_1.jpg">
+												<div class="uk-position-cover">
+													<span class="uk-label">Videos</span>
+												</div>
+											</div>
+											<div class="uk-card-body">
+												<h3 class="uk-card-title">South Mainland Up Helly Aa
+													2020</h3>
+												<span class="font-time">22 min</span>
+												<span class="play-embelish" role="presentation"><span
+														class="icon-play-button"></span></span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="uk-card uk-card-video">
+											<button data-uk-toggle="target: #banner-modal" data-src="lala1"
+												class="js-open-modal uk-position-cover uk-width-1-1 uk-position-z-index"
+												aria-label="Click to play video"></button>
+											<div class="uk-card-media">
+												<img alt="Watch Petr" data-uk-cover data-uk-img
+													src="./img/video_img_2.jpg">
+												<div class="uk-position-cover">
+													<span class="uk-label">Videos</span>
+												</div>
+											</div>
+											<div class="uk-card-body">
+												<h3 class="uk-card-title">South Mainland Up Helly Aa
+													2020</h3>
+												<span class="font-time">22 min</span>
+												<span class="play-embelish" role="presentation"><span
+														class="icon-play-button"></span></span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="uk-card uk-card-video">
+											<button data-uk-toggle="target: #banner-modal" data-src="lala2"
+												class="js-open-modal uk-position-cover uk-width-1-1 uk-position-z-index"
+												aria-label="Click to play video"></button>
+											<div class="uk-card-media">
+												<img alt="Watch Luke's Story" data-uk-cover data-uk-img
+													src="./img/video_img_3.jpg">
+												<div class="uk-position-cover">
+													<span class="uk-label">Videos</span>
+												</div>
+											</div>
+											<div class="uk-card-body">
+												<h3 class="uk-card-title">South Mainland Up Helly Aa
+													2020</h3>
+												<span class="font-time">22 min</span>
+												<span class="play-embelish" role="presentation"><span
+														class="icon-play-button"></span></span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="uk-card uk-card-video">
+											<button data-uk-toggle="target: #banner-modal" data-src="lala3"
+												class="js-open-modal uk-position-cover uk-width-1-1 uk-position-z-index"
+												aria-label="Click to play video"></button>
+											<div class="uk-card-media">
+												<img alt="Watch Vicky's Video" data-uk-cover data-uk-img
+													src="./img/video_img_4.jpg">
+												<div class="uk-position-cover">
+													<span class="uk-label">Videos</span>
+												</div>
+											</div>
+											<div class="uk-card-body">
+												<h3 class="uk-card-title">South Mainland Up Helly Aa
+													2020</h3>
+												<span class="font-time">22 min</span>
+												<span class="play-embelish" role="presentation"><span
+														class="icon-play-button"></span></span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="uk-card uk-card-video">
+											<button class="uk-position-cover uk-width-1-1 uk-position-z-index"
+												aria-label="Click to play video"></button>
+											<div class="uk-card-media">
+												<img alt="Watch Emma & Kaylee's Video" data-uk-cover data-uk-img
+													src="./img/video_img_1.jpg">
+												<div class="uk-position-cover">
+													<span class="uk-label uk-label-success">Videos</span>
+												</div>
+											</div>
+											<div class="uk-card-body">
+												<h3 class="uk-card-title">South Mainland Up Helly Aa
+													2020</h3>
+												<span class="font-time">22 min</span>
+												<span class="play-embelish" role="presentation"><span
+														class="icon-play-button"></span></span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-hidden@l"></ul>
+							<div class="uk-position-center-right uk-flex uk-flex-column uk-position-z-index">
+								<button data-uk-slider-item="previous" data-uk-slidenav-previous
+									aria-label="Previous slide"></button>
+								<button data-uk-slider-item="next" data-uk-slidenav-previous
+									aria-label="Next slide"></button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="scroll-btn-wrap scroll-btn-wrap--black uk-flex uk-flex-middle uk-flex-center">
 					<a href="#schedule" class="uk-button" data-uk-scroll data-uk-icon="arrow-down"
@@ -333,7 +341,7 @@
 					<h2 class="uk-text-center">Fire Festival Season 2020 <a href="#" class="font-instagram-logo"
 							aria-label="Click here to visit our instagram page">@promoteshetland</a></h2>
 					<div class="uk-flex instagram-grid" data-uk-grid>
-						<div class="uk-width-2-3@s uk-width-1-3@l uk-first-column">
+						<div class="uk-width-2-3@s uk-width-1-3@l">
 							<a href="#" aria-label="Click here to visit our instagram page">
 								<img data-uk-img src="./img/insta_1.jpg" alt="image" data-uk-cover>
 							</a>
@@ -354,7 +362,7 @@
 								<img data-uk-img src="./img/insta_5.jpg" alt="image" data-uk-cover>
 							</a>
 						</div>
-						<div class="uk-width-2-3@s uk-width-1-3@l uk-first-column">
+						<div class="uk-width-2-3@s uk-width-1-3@l">
 							<a href="#" aria-label="Click here to visit our instagram page">
 								<img data-uk-img src="./img/insta_6.jpg" alt="image" data-uk-cover>
 							</a>
@@ -778,20 +786,20 @@
 			<section class="links-section" id="live-work">
 				<div class="uk-container">
 					<h2 class="uk-text-center">Find out more about Shetland</h2>
-					<div class="uk-flex instagram-grid" data-uk-grid>
-						<div class="uk-width-1-2@s uk-width-1-3@l uk-first-column">
+					<div class="uk-flex instagram-grid uk-child-width-1-3@l uk-child-width-1-2@s" data-uk-grid>
+						<div>
 							<a href="#" aria-label="Click here to visit our instagram page">
 								<img data-uk-img src="./img/about_1.jpg" alt="image" data-uk-cover>
 								<span>Plan your trip</span>
 							</a>
 						</div>
-						<div class="uk-width-1-2@s uk-width-1-3@l">
+						<div>
 							<a href="#" aria-label="Click here to visit our instagram page">
 								<img data-uk-img src="./img/about_2.jpg" alt="image" data-uk-cover>
 								<span>Things to do</span>
 							</a>
 						</div>
-						<div class="uk-width-1-2@s uk-width-1-3@l">
+						<div>
 							<a href="#" aria-label="Click here to visit our instagram page">
 								<img data-uk-img src="./img/about_3.jpg" alt="image" data-uk-cover>
 								<span>Live Work and Study</span>
@@ -810,11 +818,11 @@
 					<span class="uk-margin-auto uk-text-center" data-uk-icon="arrow-down">Shetland's Up Helly Aa
 						festivals</span>
 					<div class="uk-flex">
-						<p class="left uk-width-1-3">Between January and March every year,
+						<p class="left uk-width-1-3@l">Between January and March every year,
 							communities across Shetland come
 							together for a series of spectacular and
 							unique fiery celebrations.</p>
-						<p class="right uk-width-2-3">
+						<p class="right uk-width-2-3@l">
 							Shetland's Up Helly Aa festivals are partly a <a href="#"
 								class="uk-button uk-button-text">celebration of Shetland Viking past</a>,
 							but also a triumphant demonstration of islanders' skill, spirit and sense of
@@ -827,11 +835,19 @@
 			<section class="media-section" id="gallery">
 				<div class="uk-container uk-container-expand">
 					<h2 class="uk-text-center">Latest Social Media Activity</h2>
-					<div class="uk-flex">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
+					<div class="uk-flex uk-child-width-1-4@l uk-child-width-1-2@s media-grid" data-uk-grid>
+						<div>
+							<p>Content 1</p>
+						</div>
+						<div>
+							<p>Content 2</p>
+						</div>
+						<div>
+							<p>Content 3</p>
+						</div>
+						<div>
+							<p>Content 4</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -901,8 +917,21 @@
 			}
 		);
 	}
+
+	function playVideo() {
+		var modalBtn = document.getElementsByClassName('js-open-modal');
+		var video = document.getElementsByClassName('js-video')[0];
+		for (var i = 0; i < modalBtn.length; i++) {
+			modalBtn[i].onclick = function () {
+				var videoSrc = this.dataset.src;
+				video.src = videoSrc;
+			}
+		}
+	}
+
 	window.addEventListener("load", function () {
 		navigation();
+		playVideo();
 	});
 
 </script>

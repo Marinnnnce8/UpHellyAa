@@ -28,9 +28,9 @@ h2 {
 	font-family: $font-bold;
 	line-height: 1.2;
 	color: $white;
-	// @media (max-width: $breakpointSmall) {
-	// 	font-size: 34px;
-	// }
+	@media (max-width: $breakpointSmall) {
+		font-size: 26px;
+	}
 }
 
 h3 {
