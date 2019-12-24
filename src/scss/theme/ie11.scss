@@ -1,96 +1,25 @@
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-    .nb-container, .cruise-section .nb-container {
-        margin-left: 320px;
-    }
-    .banner .uk-slider-nav li .uk-button {
-        display: block;
-        text-align: left;
-        width: 60%;
-    }
-    .dashboard-content .uk-flex-column {
-        width: 100%;
-    }
-    .nav-text {
+    .scroll-btn-wrap {
+        &::after {
+            left: 99%;
+        }
 
         &::before {
-            background-size: 250px 70px;
+            right: 99%;
         }
-    }
-    .footer__label span {
-        height: 70px;
-        background-size: 250px 70px;
-    }
 
-    .header .uk-navbar-dropdown-nav > li .uk-background-cover img {
-        display: block;
-        margin-bottom: -20px;
-    }
-
-    .wave-box .uk-card-body::after {
-        background-size: 250px 70px;
-    }
-
-    .nb-facts .nb-facts-body::after {
-        background-size: 250px 70px;
-    }
-
-    .nb-link-contact {
-        color: transparent !important;
-    }
-
-    .uk-button--underline .font-gross::before {
-        right: -3px;
-    }
-
-    .dashboard-bottom {
-        .uk-button--underline .font-gross::before {
-            top: 2px;
+        .uk-button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
-    }
 
-    .dashboard-date {
-        padding-top: 7px;
-    }
-
-    .zig-zag__inner .zig-zag__text .zig-zag-bottom {
-        bottom: calc(100% - 1px);
-    }
-
-    .zig-zag-bottom {
-        bottom: -1px;
-    }
-
-    .nb-container {
-        >.uk-container {
-            margin-right: 170px;
+        @include hover {
+            .uk-button {
+                transform: translate(-50%, -35%);
+            }
         }
-    }
-    .sectors-half .zig-zag-top {
-        top: -1px;
-    }
-}
-
-@supports (-ms-ime-align:auto) {
-    .zig-zag-waves {
-        top: -1px;
-        height: calc(100% + 1px);
-    }
-
-    .zig-zag-top {
-        left: -1px;
-        top: -1px;
-    }
-
-    .zig-zag__inner .zig-zag__text .zig-zag-bottom {
-        bottom: calc(100% - 1px);
-    }
-
-    .zig-zag-bottom {
-        bottom: -1px;
-    }
-
-    .dashboard-box .zig-zag-top {
-        left: 0;
     }
 }

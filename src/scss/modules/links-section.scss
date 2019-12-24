@@ -12,13 +12,14 @@
             transform: rotate(-90deg) translate(120%, 0%);
         }
         &::after {
-            transform: rotate(0deg) translate(0%, -85%);
+            transform: rotate(0deg) translate(0%, -84%);
         }
 
         .uk-button {
             border: 2px solid $black;
 
-            svg {
+            svg, svg > * {
+                fill: $black;
                 color: $black;
             }
         }

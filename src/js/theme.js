@@ -216,12 +216,4 @@ function renderItems(items, config) {
   );
 }
 
-// if (document.getElementsByClassName("btn-down").length) {
-//   var btnDown = document.getElementsByClassName("btn-down")[0];
-//   var secTo = document.getElementsByClassName("js-scroll-to")[0];
-//   btnDown.addEventListener("click", function() {
-//     var top = secTo.offsetTop;
 
-//     window.scrollTo(0, top);
-//   });
-// }

@@ -1,5 +1,5 @@
 .subscribe-section {
-    padding: 280px 0 90px;
+    padding: 30px 0 90px;
     h2 {
         color: $grey-about;
         margin-bottom: 15px;
@@ -22,10 +22,15 @@
 			text-transform: none;
 			font-size: inherit;
             width: auto;
-            height: auto;
+			height: auto;
+			line-height: 1.5;
+			text-decoration: underline;
             &::before {
                 border-color: $blue-dark;
-            }
+			}
+			@include hover {
+				color: $orange;
+			}
         }
 	}
 	@media (max-width: $breakpointLarge) {
@@ -59,7 +64,7 @@
 	min-height: 63px;
 
 	input {
-		padding: 5px 200px 5px 15px;
+		padding: 5px 200px 5px 25px;
 		border-radius: 50px;
         min-height: 63px;
         font-size: 18px;

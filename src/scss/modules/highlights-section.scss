@@ -39,10 +39,36 @@
 
 .highlights-inner {
     position: relative;
-    top: 215px;
-
+    padding-bottom: 30px;
+    &::before, &::after {
+        position: absolute;
+        left: -40px;
+        width: calc(100% + 80px);
+        content: '';
+        top: 55px;
+        z-index: 0;
+    }
+    &::after {
+        background: $grey-coal;
+        height: 318px;
+    }
+    &::before {
+        background: $white;
+        bottom: 0;
+    }
+    .uk-switcher {
+        position: relative;
+        z-index: 1;
+    }
     @media (max-width: $breakpointLarge) {
-        top: 0;
+        padding-bottom: 0;
+        &::after {
+            height: 100%;
+            bottom: 0;
+        }
+        &::before {
+            display: none;
+        }
     }
 }
 
@@ -50,47 +76,56 @@
     &:focus {
         outline: 0;
     }
+
     .uk-slidenav {
         background: $black;
         border-radius: 50%;
         height: 58px;
-		width: 58px;
+        width: 58px;
         transition: $nbSec ease-in-out;
         margin: 0;
         z-index: 3;
-		&:first-of-type {
+
+        &:first-of-type {
             transform: scale(0) translate(-50%, -50%);
+
             @include hover {
                 transform: scale(1) translate(-50%, -50%);
             }
-		}
-		&:last-of-type {
+        }
+
+        &:last-of-type {
             transform: scale(0) translate(50%, -50%);
+
             @include hover {
                 transform: scale(1) translate(50%, -50%);
             }
-		}
+        }
+
         svg {
-			fill: $grey-light;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-		}
+            fill: $grey-light;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         @include hover {
             background: $grey-nav;
         }
     }
+
     .uk-slider-container {
         @include hover {
             ~.uk-slidenav {
                 &:first-of-type {
                     transform: scale(1) translate(-50%, -50%);
                 }
+
                 &:last-of-type {
                     transform: scale(1) translate(50%, -50%);
                 }
-            } 
+            }
         }
     }
 }
@@ -118,7 +153,9 @@
 
     li:not(.uk-active) button {
         background: $grey-nav;
-        &::before, &::after {
+
+        &::before,
+        &::after {
             bottom: -2px;
             border-style: solid;
             width: 0;
@@ -134,12 +171,14 @@
             height: 0;
             border-color: transparent;
         }
+
         @include hover {
             background: $grey-coal-mid;
+
             &::before {
                 border-color: transparent transparent transparent rgba($grey-coal-mid, .7);
             }
-    
+
             &::after {
                 border-color: transparent transparent rgba($grey-coal-mid, .7);
             }

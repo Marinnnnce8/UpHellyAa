@@ -17,6 +17,12 @@
                 bottom: 8px;
                 width: 35px;
             }
+            @include hover {
+                color: $orange;
+                &::before {
+                    color: $orange;
+                }
+            }
         }
     }
     @media (max-width: $breakpointLarge) {
