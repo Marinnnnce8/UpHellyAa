@@ -155,3 +155,29 @@ a:hover {
 		font-size: 15px;
 	}
 }
+
+.schedule-section,
+.instagram-section,
+.highlights-section,
+.subscribe-section,
+.links-section,
+.about-section,
+.media-section,
+.footer-copyright {
+	>.uk-container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@media (max-width: $breakpointLarge) {
+		>.uk-container {
+			padding-left: 25px;
+			padding-right: 25px;
+		}	
+	}
+	@media (max-width: $breakpointSmall) {
+		>.uk-container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}	
+	}
+}

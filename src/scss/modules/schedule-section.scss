@@ -7,6 +7,12 @@
     @media (max-width: $breakpointLarge) {
         padding: 100px 0 80px;
     }
+    @media (max-width: $breakpointSmall) {
+        padding: 100px 0 55px;
+        .uk-grid-medium>.uk-grid-margin {
+            margin-top: 15px;
+        }
+    }
 }
 
 .schedule-box {

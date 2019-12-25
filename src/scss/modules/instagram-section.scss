@@ -42,6 +42,9 @@
             bottom: 5px;
         }
     }
+    @media (max-width: $breakpointSmall) {
+        padding: 55px 0;
+    }
 }
 
 .instagram-grid {

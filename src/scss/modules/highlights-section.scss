@@ -44,8 +44,8 @@
     &::before,
     &::after {
         position: absolute;
-        left: -40px;
-        width: calc(100% + 80px);
+        left: -50px;
+        width: calc(100% + 100px);
         content: '';
         top: 55px;
         z-index: 0;

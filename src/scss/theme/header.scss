@@ -8,6 +8,9 @@
 			font-size: 25px;
 			font-family: $font-ultra;
 		}
+		>a:first-of-type {
+			padding-left: 15px;
+		}
 	}
 
 	ul {
@@ -65,6 +68,9 @@
 		nav {
 			padding-right: 110px;
 			position: relative;
+			>a:first-of-type {
+				padding-left: 0;
+			}
 
 			>button {
 				font-family: $font-bold;

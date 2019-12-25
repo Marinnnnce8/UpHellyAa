@@ -60,6 +60,8 @@
 	margin-bottom: 25px;
 
 	@media (max-width: $breakpointLarge) {
+		width: 100%;
+		max-width: 100%;
 		padding: 58px 45px 68px 47px;
 	}
 
