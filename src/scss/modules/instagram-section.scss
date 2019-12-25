@@ -9,13 +9,15 @@
         a {
             color: $blue;
             position: relative;
-            padding-right: 50px;
+            padding-right: 40px;
 
             &::before {
+                color: $blue;
                 position: absolute;
                 right: 0;
                 bottom: 8px;
                 width: 35px;
+                transition: $nbSec ease-in-out;
             }
             @include hover {
                 color: $orange;
@@ -29,6 +31,15 @@
         padding: 60px 0 65px;
         h2 {
             margin-bottom: 30px;
+            a {
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+    @media (max-width: $breakpointMedium) {
+        h2 a::before {
+            bottom: 5px;
         }
     }
 }

@@ -28,8 +28,21 @@
 		color: #000;
 	}
 
+	h2 {
+		font-size: 28px;
+	}
+
 	.temp {
 		display: none;
+	}
+
+	.uk-grid-column-medium>*,
+	.uk-grid-medium>* {
+		padding-left: 15px;
+	}
+
+	.uk-grid-medium>.uk-grid-margin {
+		margin-top: 15px;
 	}
 
 	.header,
@@ -40,10 +53,98 @@
 	.uk-breadcrumb,
 	.uk-pagination,
 	.uk-modal,
+	.uk-slider-nav,
 	.btn-load,
 	.uk-button--underline,
 	.uk-slidenav,
+	.scroll-btn-wrap,
+	.uk-slider-container,
+	.banner .uk-container .uk-container,
+	.schedule-box a,
+	.instagram-section,
+	.links-section a::before,
+	.links-section img,
+	.about-section .uk-icon,
+	.font-time::before,
+	.highlights-section,
+	.subscribe-section,
+	.links-section,
+	.media-section,
 	.btn-down {
 		display: none !important;
+	}
+
+	.uk-container {
+		padding: 0 20px;
+	}
+
+	.banner,
+	.schedule-section,
+	.about-section {
+		padding: 20px 0 10px;
+		min-height: auto;
+	}
+
+	.banner-inner {
+		position: relative;
+		bottom: auto;
+	}
+
+	.banner {
+		h1 {
+			font-size: 36px;
+		}
+
+		.subtitle {
+			margin-bottom: 0;
+		}
+	}
+
+	.schedule-section {
+		h2 {
+			margin-bottom: 15px;
+		}
+
+		.uk-grid {
+			>div {
+				display: inline-block;
+				width: 25%;
+			}
+		}
+	}
+
+	.schedule-box {
+		padding: 5px;
+		border: 0;
+
+		span {
+			&:first-of-type {
+				font-size: 28px;
+
+				sup {
+					top: -.5em;
+				}
+			}
+			&:last-of-type {
+				span,
+				svg {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.schedule-box:hover,
+	.schedule-box:focus,
+	.schedule-box:active {
+		border-color: $black;
+	}
+
+	.schedule-box:hover>span:last-of-type,
+	.schedule-box:focus>span:last-of-type,
+	.schedule-box:active>span:last-of-type {
+		padding-left: 0;
+		color: $black;
+		text-decoration: none;
 	}
 }

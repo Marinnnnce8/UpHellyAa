@@ -216,4 +216,49 @@ function renderItems(items, config) {
   );
 }
 
+if (document.getElementsByClassName("main-nav-mobile")) {
+  Mmenu.configs.classNames.selected = "uk-active";
+}
 
+function navigation() {
+  var menu = new Mmenu(
+    ".main-nav-mobile",
+    {
+      pageScroll: true,
+      scrollBugFix: {
+        fix: !0
+      },
+      onClick: {
+        close: !0
+      },
+      extensions: ["fx-listitems-slide", "fullscreen", "fx-panels-slide-100"]
+    },
+    {
+      classNames: {
+        panel: "Panel",
+        selected: "uk-active"
+      }
+    }
+  );
+  var menuAPI = menu.API;
+  document.querySelector("#nav-open-btn").addEventListener("click", function() {
+    menuAPI.open();
+  });
+  document
+    .querySelector("#nav-close-btn")
+    .addEventListener("click", function() {
+      menuAPI.close();
+    });
+}
+
+window.addEventListener("load", function() {
+  navigation();
+});
+var title = "";
+$(".fancybox").fancybox({
+  beforeShow: function() {
+    $(".fancybox-inner .fancybox-slide").prepend(
+      '<div class="btn-wrap"><span class="font-live-streaming uk-label">Live Broadcast</span></div>'
+    );
+  }
+});

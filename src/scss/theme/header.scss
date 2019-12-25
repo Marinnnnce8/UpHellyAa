@@ -40,7 +40,11 @@
 			border: 2px solid $white;
 			border-radius: 50%;
 			height: 42px;
+			display: inline-block;
 			width: 42px;
+			&:not(:first-of-type){
+				margin-left: 12px;
+			}
 
 			&::before,
 			svg {
@@ -93,7 +97,7 @@
 
 	@media (max-width: $breakpointSmall) {
 		nav {
-			padding-right: 45px;
+			padding-right: 47px;
 
 			>a {
 				&:last-of-type {

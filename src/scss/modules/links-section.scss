@@ -24,14 +24,23 @@
             }
         }
     }
+    span {
+        z-index: 1;
+    }
+    .instagram-grid a::before {
+        background: linear-gradient(to top, $black 0%, transparent 100%);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        content: '';
+        height: 100px;
+        z-index: 1;
+    }
     @media (max-width: $breakpointLarge) {
         padding-bottom: 90px;
         h2 {
             margin-bottom: 25px;
         }
     }
-}
-
-.links-box {
-    min-height: 385px;
 }

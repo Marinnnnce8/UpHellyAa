@@ -1,4 +1,5 @@
 .banner {
+	background: $black;
 	min-height: 100vh;
 	position: relative;	
 	padding: 445px 0 75px;
@@ -19,7 +20,8 @@
 			margin-bottom: 7px;
 		}
         svg {
-			fill: $grey-light;
+			color: $white;
+			fill: $white;
 			position: absolute;
 			left: 50%;
 			top: 50%;
