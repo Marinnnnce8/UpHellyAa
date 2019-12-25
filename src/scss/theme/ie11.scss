@@ -1,5 +1,22 @@
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
+    .uk-card-video .uk-label {
+        line-height: 35px;
+    }
+
+    .highlights-nav button {
+
+        &::before,
+        &::after,
+        span {
+            display: none;
+        }
+    }
+
+    .links-section .scroll-btn-wrap::after {
+        transform: rotate(0deg) translate(0%, -83%);
+    }
+
     .scroll-btn-wrap {
         &::after {
             left: 99%;

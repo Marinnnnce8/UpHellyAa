@@ -13,9 +13,10 @@ h6 {
 h1 {
 	font-size: 84px;
 	color: $white;
-	margin-bottom: 5px;
+	margin-bottom: 0;
 	font-family: $font-ultra;
 	@media (max-width: $breakpointLarge) {
+		margin-bottom: 5px;
 		font-size: 55px;
 	}
 	@media (max-width: $breakpointSmall) {
@@ -26,7 +27,7 @@ h1 {
 h2 {
 	font-size: 34px;
 	font-family: $font-bold;
-	line-height: 1.2;
+	line-height: 1.4;
 	color: $white;
 	@media (max-width: $breakpointSmall) {
 		font-size: 26px;
@@ -52,8 +53,6 @@ h6 {
 p {
 	margin-bottom: 15px;
 	font-size: 18px;
-	// font-family: $light;
-	// color: $black;
 
 	a {
 		color: $blue;

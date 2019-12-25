@@ -1,14 +1,26 @@
 .schedule-section {
     background: $grey-nav;
     padding: 95px 0 85px;
+
     h2 {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
+
     @media (max-width: $breakpointLarge) {
         padding: 100px 0 80px;
+
+        h2 {
+            margin-bottom: 30px;
+        }
     }
+
     @media (max-width: $breakpointSmall) {
         padding: 100px 0 55px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
         .uk-grid-medium>.uk-grid-margin {
             margin-top: 15px;
         }
@@ -21,13 +33,13 @@
     border-radius: 10px;
     position: relative;
     transition: $nbSec ease-in-out;
-    padding: 35px 33px 32px 30px;
+    padding: 35px 33px 20px 30px;
 
     a {
-		&:focus {
-			outline: -webkit-focus-ring-color auto 1px; //sass-lint:disable-line no-vendor-prefixes
-		}
-	}
+        &:focus {
+            outline: -webkit-focus-ring-color auto 1px; //sass-lint:disable-line no-vendor-prefixes
+        }
+    }
 
     >span {
         &:first-of-type {
@@ -80,6 +92,7 @@
 
     @include hover {
         border-color: $orange-dark;
+
         >span {
             &:last-of-type {
                 padding-left: 20px;
@@ -92,15 +105,19 @@
             }
         }
     }
+
     @media (max-width: $breakpointLarge) {
-        padding: 30px 25px 25px;
+        padding: 30px 25px;
+
         span {
             &:first-of-type {
                 font-size: 36px;
+
                 sup {
                     top: -1em;
                 }
             }
+
             &:last-of-type {
                 font-size: 18px;
             }

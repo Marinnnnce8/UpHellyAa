@@ -1,6 +1,6 @@
 .highlights-section {
     background: $grey-nav;
-    padding-top: 75px;
+    padding-top: 70px;
 
     h2 {
         margin-bottom: 30px;
@@ -29,10 +29,32 @@
     }
 
     @media (max-width: $breakpointLarge) {
-        padding: 75px 0 40px;
+        padding: 75px 0 0;
 
         .uk-slider-nav {
             margin-top: 40px;
+        }
+
+        .uk-container {
+            position: relative;
+            padding-bottom: 40px;
+
+            &::after {
+                background: $grey-coal;
+                position: absolute;
+                left: -25px;
+                width: calc(100% + 50px);
+                content: '';
+                top: 60px;
+                bottom: 0;
+                z-index: 0;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        h2 {
+            margin-bottom: 25px;
         }
     }
 }
@@ -47,13 +69,13 @@
         left: -50px;
         width: calc(100% + 100px);
         content: '';
-        top: 55px;
+        top: 60px;
         z-index: 0;
     }
 
     &::after {
         background: $grey-coal;
-        height: 318px;
+        height: 349px;
     }
 
     &::before {
@@ -63,19 +85,29 @@
 
     .uk-switcher {
         position: relative;
+        margin-top: 55px;
         z-index: 1;
     }
 
     @media (max-width: $breakpointLarge) {
         padding-bottom: 0;
 
-        &::after {
-            height: 100%;
-            bottom: 0;
-        }
-
+        &::after,
         &::before {
             display: none;
+        }
+
+        .uk-switcher {
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        &::after {
+            display: block;
+        }
+        .uk-switcher {
+            margin-top: 35px;
         }
     }
 }
@@ -141,13 +173,15 @@
 }
 
 .highlights-nav {
-
     button {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         border: 2px solid $grey-coal-mid;
+        border-bottom: 0;
         font-family: $font-bold;
         position: relative;
+        min-height: 60px;
+        padding: 0 30px;
         font-size: 15px;
         z-index: 1;
         transition: $nbSec ease-in-out;
@@ -295,6 +329,13 @@
                 right: 98%;
                 bottom: -4%;
             }
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        button {
+            font-size: 14px;
+            padding: 0 15px;
         }
     }
 }

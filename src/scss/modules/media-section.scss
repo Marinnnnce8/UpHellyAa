@@ -1,14 +1,18 @@
 .media-section {
     padding: 30px 0 80px;
+
     h2 {
         color: $grey-about;
         margin-bottom: 45px;
     }
+
     @media (max-width: $breakpointLarge) {
         padding: 40px 0 65px;
     }
+
     @media (max-width: $breakpointSmall) {
         padding: 25px 0 50px;
+
         h2 {
             margin-bottom: 30px;
         }
@@ -22,8 +26,9 @@
             margin-top: 15px;
         }
     }
+
     >div p {
         min-height: 300px;
         background: $orange-shade;
-    }  
+    }
 }

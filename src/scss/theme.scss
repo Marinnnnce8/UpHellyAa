@@ -1,6 +1,5 @@
 @import 'config/variables.scss';
 
-@import 'base/breakpoints.scss';
 @import 'base/fonts.scss';
 @import 'base/layout.scss';
 @import 'base/typography.scss';
@@ -22,15 +21,10 @@
 @import 'modules/about-section.scss';
 @import 'modules/media-section.scss';
 
-// NB
-@import 'nb/block.scss';
-@import 'nb/file-icon.scss';
-
 // Theme
 @import 'theme/base.scss';
 @import 'theme/header.scss';
 @import 'theme/footer.scss';
-@import 'theme/firefox.scss';
 @import 'theme/ie11.scss';
 @import 'theme/print.scss';
 

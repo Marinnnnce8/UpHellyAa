@@ -19,29 +19,41 @@
                 width: 35px;
                 transition: $nbSec ease-in-out;
             }
+
             @include hover {
                 color: $orange;
+
                 &::before {
                     color: $orange;
                 }
             }
         }
     }
+
     @media (max-width: $breakpointLarge) {
         padding: 60px 0 65px;
+
         h2 {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            font-size: 27px;
+
             a {
                 display: inline-block;
                 margin-left: 5px;
             }
         }
     }
+
     @media (max-width: $breakpointMedium) {
-        h2 a::before {
-            bottom: 5px;
+        h2 {
+            font-size: 24px;
+
+            a::before {
+                bottom: 5px;
+            }
         }
     }
+
     @media (max-width: $breakpointSmall) {
         padding: 55px 0;
     }
@@ -62,6 +74,7 @@
         border-radius: 10px;
         transition: $nbSec ease-in-out;
         padding-top: 100%;
+
         >span {
             position: absolute;
             font-family: $font-bold;
@@ -108,6 +121,7 @@
         a+a {
             margin-top: 12px;
         }
+
         *+.uk-grid-margin,
         .uk-grid+.uk-grid,
         .uk-grid>.uk-grid-margin {

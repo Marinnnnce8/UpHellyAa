@@ -8,6 +8,7 @@
 			font-size: 25px;
 			font-family: $font-ultra;
 		}
+
 		>a:first-of-type {
 			padding-left: 15px;
 		}
@@ -45,7 +46,8 @@
 			height: 42px;
 			display: inline-block;
 			width: 42px;
-			&:not(:first-of-type){
+
+			&:not(:first-of-type) {
 				margin-left: 12px;
 			}
 
@@ -68,6 +70,7 @@
 		nav {
 			padding-right: 110px;
 			position: relative;
+
 			>a:first-of-type {
 				padding-left: 0;
 			}
@@ -111,6 +114,7 @@
 					font-size: 18px;
 				}
 			}
+
 			>button {
 				font-size: 0;
 
@@ -124,6 +128,10 @@
 		.social a {
 			width: 38px;
 			height: 38px;
+
+			svg {
+				width: 18px;
+			}
 		}
 	}
 }

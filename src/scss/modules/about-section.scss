@@ -1,8 +1,8 @@
 .about-section {
-    padding: 125px 0 65px;
+    padding: 100px 0 65px;
 
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         color: $grey-dark;
     }
 
@@ -12,7 +12,7 @@
         font-size: 20px;
         position: relative;
         padding-bottom: 48px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         line-height: 1;
 
         svg {
@@ -62,6 +62,11 @@
 
     @media (max-width: $breakpointLarge) {
         padding: 80px 0 40px;
+        h2 {
+            max-width: 75%;
+            line-height: 1.2;
+            margin: 0 auto 20px;
+        }
         span {
             margin-bottom: 30px;
         }
@@ -79,8 +84,12 @@
     }
     @media (max-width: $breakpointSmall) {
         padding: 60px 0 25px;
+        h2 {
+            max-width: 100%;
+        }
         span {
             margin-bottom: 15px;
+            font-size: 18px;
         }
         .uk-flex {
             flex-direction: column;
@@ -91,7 +100,7 @@
             }
             &.left {
                 padding-right: 0;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
         }
     }
