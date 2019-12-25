@@ -41,14 +41,20 @@
 	@if $filename == live-streaming {
 		$char: '\E005';
 	}
-	@if $filename == right-arrow {
+	@if $filename == play-button-arrowhead {
 		$char: '\E006';
 	}
-	@if $filename == rounded-corner-white {
+	@if $filename == right-arrow {
 		$char: '\E007';
 	}
-	@if $filename == time {
+	@if $filename == rounded-corner-white-1 {
 		$char: '\E008';
+	}
+	@if $filename == rounded-corner-white {
+		$char: '\E009';
+	}
+	@if $filename == time {
+		$char: '\E00A';
 	}
 
 	@return $char;
@@ -84,8 +90,14 @@
 .font-live-streaming {
 	@include font(live-streaming);
 }
+.font-play-button-arrowhead {
+	@include font(play-button-arrowhead);
+}
 .font-right-arrow {
 	@include font(right-arrow);
+}
+.font-rounded-corner-white-1 {
+	@include font(rounded-corner-white-1);
 }
 .font-rounded-corner-white {
 	@include font(rounded-corner-white);

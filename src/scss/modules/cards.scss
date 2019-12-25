@@ -26,16 +26,14 @@
 		z-index: 0;
 
 		&::before {
-			background-image: url('../img/play-button-arrowhead.svg');
-			background-size: 68px 74px;
-			content: '';
-			display: inline-block;
+			content: font-char($play);
 			position: absolute;
+			color: $white;
+			font-family: 'svgicons';
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
-			width: 68px;
-			height: 74px;
+			font-size: 68px;
 			opacity: .3;
 			transition: $nbSec ease-in-out;
 			z-index: 1;
@@ -102,7 +100,6 @@
 		background: url('../img/play-btn-wrapper.svg') no-repeat;
 		background-size: contain;
 		background-position: center;
-		z-index: 1;
 
 		span {
 			font-size: 25px;
@@ -117,24 +114,22 @@
 			position: relative;
 
 			&::before {
-				background-image: url('../img/play-button-arrowhead.svg');
-				background-size: 22px 25px;
-				content: '';
-				display: inline-block;
+				color: $white;
+				content: font-char($play);
 				position: absolute;
+				font-family: 'svgicons';
 				left: 55%;
 				top: 50%;
 				transform: translate(-50%, -50%);
-				width: 22px;
-				height: 25px;
-				z-index: 1;
+				font-size: 22px;
+				transition: $nbSec ease-in-out;
 			}
 		}
 	}
 
 	.read-more {
 		.icon-play-button {
-			color: #fff;
+			color: $white;
 			font-size: 74px;
 			position: absolute;
 			top: 50%;

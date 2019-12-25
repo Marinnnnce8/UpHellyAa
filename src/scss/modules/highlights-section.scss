@@ -40,7 +40,9 @@
 .highlights-inner {
     position: relative;
     padding-bottom: 30px;
-    &::before, &::after {
+
+    &::before,
+    &::after {
         position: absolute;
         left: -40px;
         width: calc(100% + 80px);
@@ -48,24 +50,30 @@
         top: 55px;
         z-index: 0;
     }
+
     &::after {
         background: $grey-coal;
         height: 318px;
     }
+
     &::before {
         background: $white;
         bottom: 0;
     }
+
     .uk-switcher {
         position: relative;
         z-index: 1;
     }
+
     @media (max-width: $breakpointLarge) {
         padding-bottom: 0;
+
         &::after {
             height: 100%;
             bottom: 0;
         }
+
         &::before {
             display: none;
         }
@@ -135,7 +143,8 @@
 .highlights-nav {
 
     button {
-        border-radius: 8px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         border: 2px solid $grey-coal-mid;
         font-family: $font-bold;
         position: relative;
@@ -151,64 +160,118 @@
             content: '';
             font-size: 20px;
         }
+
+        span {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+
+            &::before,
+            &::after {
+                position: absolute;
+                bottom: 0;
+                display: block;
+                content: '';
+                font-size: 20px;
+            }
+        }
     }
 
-    li:not(.uk-active) button {
-        background: $grey-nav;
-
-        &::before,
-        &::after {
-            bottom: -2px;
-            border-style: solid;
-            width: 0;
-            border-width: 10px 0 0 10px;
+    li:not(.uk-active) {
+        position: relative;
+        &:first-of-type {
+            z-index: 3;
+        }
+        &:nth-of-type(2) {
+            z-index: 4;
+        }
+        &:last-of-type {
+            z-index: 5;
         }
 
-        &::before {
-            left: 98%;
-            border-color: transparent;
-        }
+        button {
+            background: $grey-nav;
 
-        &::after {
-            height: 0;
-            border-color: transparent;
-        }
+            span::before,
+            span::after,
+            &::before,
+            &::after {
+                border-style: solid;
+                width: 0;
+                border-width: 8px 0 0 8px;
+            }
 
-        @include hover {
-            background: $grey-coal-mid;
+            &::before,
+            &::after {
+                bottom: 0;
+                z-index: 1;
+            }
+
+            span::before,
+            span::after {
+                bottom: -2px;
+                z-index: 0;
+            }
 
             &::before {
-                border-color: transparent transparent transparent rgba($grey-coal-mid, .7);
+                left: 98%;
+                border-color: transparent transparent transparent $grey-nav;
             }
 
             &::after {
-                border-color: transparent transparent rgba($grey-coal-mid, .7);
+                height: 0;
+                border-color: transparent transparent $grey-nav;
             }
+
+            span::before {
+                left: 102%;
+                border-color: transparent transparent transparent $grey-coal-mid;
+            }
+
+            span::after {
+                right: 102%;
+                border-color: transparent transparent $grey-coal-mid;
+            }
+
+            @include hover {
+                background: $grey-coal-mid;
+
+                &::before {
+                    border-color: transparent transparent transparent rgba($grey-coal-mid, .7);
+                }
+
+                &::after {
+                    border-color: transparent transparent rgba($grey-coal-mid, .7);
+                }
+            }
+
         }
     }
 
     .uk-active {
-        z-index: 2;
+        z-index: 7;
 
         button {
             background: $grey-coal;
 
             &::before,
             &::after {
-                content: font-char($corner);
                 font-family: 'svgicons';
                 color: $grey-coal;
             }
 
             &::before {
+                content: font-char($corner);
                 left: 98%;
                 bottom: -4%;
             }
 
             &::after {
-                left: -15%;
-                transform: rotate(-90deg);
-                bottom: -5%;
+                content: font-char($corner-1);
+                right: 98%;
+                bottom: -4%;
             }
         }
     }
