@@ -115,10 +115,16 @@
 	margin-right: auto;
 	min-height: 600px;
 	width: 100%;
-	max-width: 50% !important;
+	max-width: 50% !important;//sass-lint:disable-line no-important
 	padding: 0 20px 20px;
+	.inner {
+		background-color: $black;
+		min-height: 450px;
+		position: relative;
+	}
 
 	.fb-video {
+		display: block;
 		width: 100%;
 
 		iframe {
@@ -151,20 +157,31 @@
 	}
 
 	@media (max-width: $breakpointXlarge) {
-		min-height: 460px;
-		max-width: 80% !important;
+		max-width: 80% !important;//sass-lint:disable-line no-important
+		.inner {
+			min-height: 500px;
+		}
 	}
 	@media (max-width: $breakpointLarge) {
 		margin-left: 0;
 		margin-right: 0;
 		padding: 0 0 20px;
-		max-width: 100% !important;
+		max-width: 100% !important;//sass-lint:disable-line no-important
 		.uk-label {
 			display: block;
 			max-width: 220px;
 		}
 	}
+	@media (max-width: $breakpointMedium) {
+		min-height: 500px;
+		.inner {
+			min-height: 300px;
+		}
+	}
 	@media (max-width: $breakpointSmall) {
 		min-height: 250px;
+		.inner {
+			min-height: 150px;
+		}
 	}
 }
