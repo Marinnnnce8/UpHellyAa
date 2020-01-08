@@ -1,5 +1,11 @@
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
+
+    html,
+    body {
+        overflow-x: visible !important;
+    }
+
     .uk-card-video .uk-label {
         line-height: 35px;
     }
@@ -31,11 +37,9 @@ screen and (-ms-high-contrast: none) {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-        }
 
-        @include hover {
-            .uk-button {
-                transform: translate(-50%, -15%);
+            @include hover {
+                transform: translate(-50%, -15%) !important;
             }
         }
     }
