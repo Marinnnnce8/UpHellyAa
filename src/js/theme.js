@@ -254,11 +254,3 @@ function navigation() {
 window.addEventListener("load", function() {
   navigation();
 });
-var title = "";
-$(".fancybox").fancybox({
-  beforeShow: function() {
-    $(".fancybox-inner .fancybox-slide").prepend(
-      '<div class="btn-wrap"><span class="font-live-streaming uk-label">Live Broadcast</span></div>'
-    );
-  }
-});

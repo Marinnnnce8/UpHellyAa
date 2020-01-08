@@ -1,25 +1,39 @@
 .banner {
 	background-color: $black;
-	min-height: 100vh;
-	position: relative;	
-	padding: 445px 0 75px;
+	position: relative;
+	padding: 200px 0 75px;
+
+	&::after {
+		background-image: linear-gradient(to bottom, $black, transparent);
+		height: 200px;
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+
 	.subtitle {
 		font-size: 21px;
 		font-family: $georgia-bold;
 		display: block;
 		margin-bottom: 40px;
 	}
+
 	.uk-slidenav {
-        background: $black;
-        border-radius: 50%;
-        height: 58px;
+		background: $black;
+		border-radius: 50%;
+		height: 58px;
 		width: 58px;
 		transform: translateX(50%);
 		transition: $nbSec ease-in-out;
+
 		&:first-of-type {
 			margin-bottom: 7px;
 		}
-        svg {
+
+		svg {
 			color: $white;
 			fill: $white;
 			position: absolute;
@@ -27,36 +41,50 @@
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
-        @include hover {
-            background: $grey-nav;
-        }
+
+		@include hover {
+			background: $grey-nav;
+		}
 	}
+
 	.uk-slider-nav {
 		margin-top: 30px;
+
 		li {
 			padding-left: 15px;
 		}
+
 		a {
 			border-color: $orange;
 			height: 15px;
 			width: 15px;
+
 			@include hover {
-				background: $orange;    
+				background: $orange;
 			}
 		}
+
 		.uk-active a {
 			background: $orange;
 		}
 	}
+
 	@media (max-width: $breakpointLarge) {
-		padding: 340px 0 65px;
+		padding: 150px 0 65px;
+
+		&::after {
+			display: none;
+		}
+
 		.subtitle {
 			font-size: 18px;
 			margin-bottom: 30px;
 		}
 	}
+
 	@media (max-width: $breakpointSmall) {
-		padding: 250px 0 65px;
+		padding: 100px 0 65px;
+
 		.subtitle {
 			font-size: 16px;
 		}
@@ -64,11 +92,11 @@
 }
 
 .banner-inner {
-	position: absolute;
-	bottom: 70px;
-	left: 50px;
+	position: relative;
 	padding: 0;
 	width: calc(100% - 100px);
+	z-index: 1;
+
 	@media (max-width: $breakpointLarge) {
 		position: relative;
 		bottom: 0;
@@ -76,7 +104,67 @@
 		width: auto;
 		left: auto;
 	}
+
 	@media (max-width: $breakpointSmall) {
 		padding: 0 15px;
+	}
+}
+
+.banner-video {
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 600px;
+	width: 100%;
+	max-width: 50% !important;
+	padding: 0 20px 20px;
+
+	.fb-video {
+		width: 100%;
+
+		iframe {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.uk-label {
+		background: $orange-label;
+		display: inline-block;
+		margin-bottom: 8px;
+		text-transform: none;
+		font-size: 14px;
+		font-family: $font-bold;
+		border-radius: 25px;
+		padding: 15px 20px 15px 55px;
+		position: relative;
+		min-width: 180px;
+		text-align: center;
+
+		&::before {
+			position: absolute;
+			left: 8px;
+			font-size: 46px;
+			top: 50%;
+			transform: translateY(-25%);
+			color: $white;
+		}
+	}
+
+	@media (max-width: $breakpointXlarge) {
+		min-height: 460px;
+		max-width: 80% !important;
+	}
+	@media (max-width: $breakpointLarge) {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 0 20px;
+		max-width: 100% !important;
+		.uk-label {
+			display: block;
+			max-width: 220px;
+		}
+	}
+	@media (max-width: $breakpointSmall) {
+		min-height: 250px;
 	}
 }
