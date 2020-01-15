@@ -1,7 +1,7 @@
 .banner {
 	background-color: $black;
 	position: relative;
-	padding: 200px 0 75px;
+	padding: 470px 0 75px;
 
 	&::after {
 		background-image: linear-gradient(to bottom, $black, transparent);
@@ -13,6 +13,10 @@
 		width: 100%;
 		z-index: 0;
 		pointer-events: none;
+	}
+
+	h1, .subtitle {
+		text-shadow: 6px 2px 8px $black;
 	}
 
 	.subtitle {
