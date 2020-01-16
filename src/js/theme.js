@@ -1,211 +1,147 @@
-/**
- * Theme JS
- *
- * @copyright 2019 NB Communication Ltd
- *
- */
-
-var $nb = NB.util;
-var $uk = UIkit.util;
-
-var theme = {
-  init: function() {
-    this.ga();
-    this.blocks();
-  },
-
-  ga: function() {
-    var el = $nb.$("ga", "[data]");
-    if (!el) return;
-
-    var data = $nb.data(el, "ga");
-    if (!$uk.isObject(data)) return;
-    if (!$uk.isObject(data.options)) data.options = {};
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", data.id, data.options);
-  },
-
-  blocks: function() {
-    var clsTable = ["uk-table", "uk-table-justify"];
-    var alignments = ["left", "right", "center"];
-    var fileIcons = {
-      pdf: ["pdf"],
-      word: ["doc", "docx"],
-      excel: ["xls", "xlsx"],
-      powerpoint: ["ppt", "pptx"],
-      archive: ["zip", "tar"]
-    };
-
-    $nb.$$("nb-block").forEach(function(block) {
-      switch ($uk.data(block, "nb-block")) {
-        case "content":
-          // Apply UIkit table classes
-          $uk.$$("table", block).forEach(function(el) {
-            $uk.addClass(el, clsTable);
-            $uk.wrapAll(el, "<div class='uk-overflow-auto'>");
-          });
-
-          // Inline Images UIkit Lightbox/Scrollspy
-          $uk
-            .$$("a[href]", block)
-            .filter(function(a) {
-              return $uk.attr(a, "href").match(/\.(jpg|jpeg|png|gif|webp)/i);
-            })
-            .forEach(function(a) {
-              var figure = a.parentNode;
-              var caption = $uk.$("figcaption", figure);
-
-              // uk-lightbox
-              UIkit.lightbox(figure, { animation: "fade" });
-              if (caption) $uk.attr(a, "data-caption", $uk.html(caption));
-
-              // uk-scrollspy
-              for (var i = 0; i < alignments.length; i++) {
-                var align = alignments[i];
-                if ($uk.hasClass(figure, "align_" + align)) {
-                  UIkit.scrollspy(figure, {
-                    cls:
-                      "uk-animation-slide-" +
-                      (align == "center" ? "bottom" : align) +
-                      "-small"
-                  });
-                }
-              }
-            });
-
-          // UIkit File Icons
-          for (var key in fileIcons) {
-            var value = fileIcons[key];
-            for (var i = 0; i < value.length; i++) {
-              var links = $uk.$$(
-                "a[href$='." +
-                  value[i] +
-                  "']:not(.nb-file-icon):not(.nb-no-icon)",
-                block
-              );
-              if (links.length) {
-                links.forEach(function(el) {
-                  $uk.prepend(
-                    el,
-                    $nb.ukIcon(
-                      key == "pdf"
-                        ? "file-pdf"
-                        : key == "archive"
-                        ? "album"
-                        : "file-text"
-                    )
-                  );
-                  $uk.addClass(el, "nb-file-icon nb-file-icon-" + key);
-                });
-              }
-            }
-          }
-
-          break;
-        case "embed":
-          $uk.$$("iframe", block).forEach(function(el) {
-            $uk.attr(el, "data-uk-responsive", true);
-          });
-
-          UIkit.update();
-
-          break;
+var $nb = NB.util,
+  $uk = UIkit.util,
+  theme = {
+    init: function() {
+      this.ga(), this.blocks();
+    },
+    ga: function() {
+      function a() {
+        dataLayer.push(arguments);
       }
-    });
-  }
-};
-
+      var b = $nb.$("ga", "[data]");
+      if (b) {
+        var c = $nb.data(b, "ga");
+        $uk.isObject(c) &&
+          (!$uk.isObject(c.options) && (c.options = {}),
+          (window.dataLayer = window.dataLayer || []),
+          a("js", new Date()),
+          a("config", c.id, c.options));
+      }
+    },
+    blocks: function() {
+      var a = ["uk-table", "uk-table-justify"],
+        b = ["left", "right", "center"],
+        c = {
+          pdf: ["pdf"],
+          word: ["doc", "docx"],
+          excel: ["xls", "xlsx"],
+          powerpoint: ["ppt", "pptx"],
+          archive: ["zip", "tar"]
+        };
+      $nb.$$("nb-block").forEach(function(d) {
+        switch ($uk.data(d, "nb-block")) {
+          case "content":
+            for (var e in ($uk.$$("table", d).forEach(function(b) {
+              $uk.addClass(b, a),
+                $uk.wrapAll(b, "<div class='uk-overflow-auto'>");
+            }),
+            $uk
+              .$$("a[href]", d)
+              .filter(function(b) {
+                return $uk.attr(b, "href").match(/\.(jpg|jpeg|png|gif|webp)/i);
+              })
+              .forEach(function(c) {
+                var a = c.parentNode,
+                  d = $uk.$("figcaption", a);
+                UIkit.lightbox(a, { animation: "fade" }),
+                  d && $uk.attr(c, "data-caption", $uk.html(d));
+                for (var e, f = 0; f < b.length; f++)
+                  (e = b[f]),
+                    $uk.hasClass(a, "align_" + e) &&
+                      UIkit.scrollspy(a, {
+                        cls:
+                          "uk-animation-slide-" +
+                          ("center" == e ? "bottom" : e) +
+                          "-small"
+                      });
+              }),
+            c))
+              for (var f, g = c[e], h = 0; h < g.length; h++)
+                (f = $uk.$$(
+                  "a[href$='." +
+                    g[h] +
+                    "']:not(.nb-file-icon):not(.nb-no-icon)",
+                  d
+                )),
+                  f.length &&
+                    f.forEach(function(a) {
+                      $uk.prepend(
+                        a,
+                        $nb.ukIcon(
+                          "pdf" == e
+                            ? "file-pdf"
+                            : "archive" == e
+                            ? "album"
+                            : "file-text"
+                        )
+                      ),
+                        $uk.addClass(a, "nb-file-icon nb-file-icon-" + e);
+                    });
+            break;
+          case "embed":
+            $uk.$$("iframe", d).forEach(function(a) {
+              $uk.attr(a, "data-uk-responsive", !0);
+            }),
+              UIkit.update();
+        }
+      });
+    }
+  };
 $uk.ready(function() {
   theme.init();
 });
-
-/**
- * jsonRender
- *
- * @param {Array} items
- * @param {Object} config
- * @return {string}
- *
- */
-function renderItems(items, config) {
-  var out = "";
-  var classes = ["uk-grid-match", "uk-child-width-1-2@s"];
-  var sizes = $nb.ukWidths(classes);
-
-  for (var i = 0; i < items.length; i++) {
-    var item = items[i];
-
-    var title = $nb.wrap(
-      $nb.wrap(
-        item.title,
-        {
-          href: item.url,
-          class: "uk-link-reset"
-        },
-        "a"
+function renderItems(a, b) {
+  for (
+    var c = "",
+      d = ["uk-grid-match", "uk-child-width-1-2@s"],
+      e = $nb.ukWidths(d),
+      f = 0;
+    f < a.length;
+    f++
+  ) {
+    var g = a[f],
+      h = $nb.wrap(
+        $nb.wrap(g.title, { href: g.url, class: "uk-link-reset" }, "a"),
+        { class: ["uk-card-title", "uk-margin-remove-bottom"] },
+        "h3"
       ),
-      { class: ["uk-card-title", "uk-margin-remove-bottom"] },
-      "h3"
-    );
-
-    var image = item.getImage
-      ? $nb.img(
-          item.getImage,
-          {
-            alt: item.title,
-            sizes: sizes.length ? sizes.join(", ") : false
-          },
-          {
-            "uk-img": { target: "!* +*" }
-          }
-        )
-      : "";
-
-    var summary = item.getSummary ? $nb.wrap(item.getSummary, "p") : "";
-
-    var more = $nb.wrap(
-      config.more ? config.more : $nb.ukIcon("more"),
-      {
-        href: item.url,
-        class: ["uk-button", "uk-button-text"]
-      },
-      "a"
-    );
-
-    out += $nb.wrap(
+      j = g.getImage
+        ? $nb.img(
+            g.getImage,
+            { alt: g.title, sizes: !!e.length && e.join(", ") },
+            { "uk-img": { target: "!* +*" } }
+          )
+        : "",
+      k = g.getSummary ? $nb.wrap(g.getSummary, "p") : "",
+      l = $nb.wrap(
+        b.more ? b.more : $nb.ukIcon("more"),
+        { href: g.url, class: ["uk-button", "uk-button-text"] },
+        "a"
+      );
+    c += $nb.wrap(
       $nb.wrap(
-        (image
-          ? $nb.wrap(
-              $nb.wrap(image, { href: item.url }, "a"),
-              "uk-card-media-top"
-            )
+        (j
+          ? $nb.wrap($nb.wrap(j, { href: g.url }, "a"), "uk-card-media-top")
           : "") +
           $nb.wrap(
-            title +
-              (item.date_pub ? $nb.wrap(item.date_pub, "uk-text-meta") : "") +
-              (item.dates ? $nb.wrap(item.dates, "uk-text-meta") : "") +
-              (item.location ? $nb.wrap(item.location, "uk-text-meta") : ""),
+            h +
+              (g.date_pub ? $nb.wrap(g.date_pub, "uk-text-meta") : "") +
+              (g.dates ? $nb.wrap(g.dates, "uk-text-meta") : "") +
+              (g.location ? $nb.wrap(g.location, "uk-text-meta") : ""),
             "uk-card-header"
           ) +
-          (summary ? $nb.wrap(summary, "uk-card-body") : "") +
-          $nb.wrap(more, "uk-card-footer"),
-
+          (k ? $nb.wrap(k, "uk-card-body") : "") +
+          $nb.wrap(l, "uk-card-footer"),
         "uk-card uk-card-default"
       ),
       "div"
     );
   }
-
   return $nb.wrap(
-    out,
+    c,
     {
-      class: classes,
-      "data-uk-grid": true,
+      class: d,
+      "data-uk-grid": !0,
       "data-uk-scrollspy": {
         target: "> div",
         cls: "uk-animation-slide-bottom-small",
@@ -215,42 +151,31 @@ function renderItems(items, config) {
     "div"
   );
 }
-
-if (document.getElementsByClassName("main-nav-mobile")) {
-  Mmenu.configs.classNames.selected = "uk-active";
-}
-
+document.getElementsByClassName("main-nav-mobile") &&
+  (Mmenu.configs.classNames.selected = "uk-active");
 function navigation() {
-  var menu = new Mmenu(
-    ".main-nav-mobile",
-    {
-      pageScroll: true,
-      scrollBugFix: {
-        fix: !0
+  var a = new Mmenu(
+      ".main-nav-mobile",
+      {
+        pageScroll: !0,
+        scrollBugFix: { fix: !0 },
+        onClick: { close: !0 },
+        extensions: ["fx-listitems-slide", "fullscreen", "fx-panels-slide-100"]
       },
-      onClick: {
-        close: !0
-      },
-      extensions: ["fx-listitems-slide", "fullscreen", "fx-panels-slide-100"]
-    },
-    {
-      classNames: {
-        panel: "Panel",
-        selected: "uk-active"
-      }
-    }
-  );
-  var menuAPI = menu.API;
+      { classNames: { panel: "Panel", selected: "uk-active" } }
+    ),
+    b = a.API;
   document.querySelector("#nav-open-btn").addEventListener("click", function() {
-    menuAPI.open();
-  });
-  document
-    .querySelector("#nav-close-btn")
-    .addEventListener("click", function() {
-      menuAPI.close();
-    });
+    b.open();
+  }),
+    document
+      .querySelector("#nav-close-btn")
+      .addEventListener("click", function() {
+        b.close();
+      });
 }
-
 window.addEventListener("load", function() {
-  navigation();
+  if ($(".main-nav-mobile").length) {
+    navigation();
+  }
 });

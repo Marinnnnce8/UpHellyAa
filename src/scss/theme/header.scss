@@ -105,6 +105,11 @@
 			}
 		}
 	}
+	@media (max-width: $breakpointMobile){
+		.social {
+			display: none;
+		}
+	}
 
 	@media (max-width: $breakpointSmall) {
 		nav {
@@ -124,15 +129,6 @@
 					height: 38px;
 					width: 38px;
 				}
-			}
-		}
-
-		.social a {
-			width: 38px;
-			height: 38px;
-
-			svg {
-				width: 18px;
 			}
 		}
 	}

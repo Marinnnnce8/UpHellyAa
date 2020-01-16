@@ -44,6 +44,26 @@
     span {
         font-size: 15px;
     }
+    a {
+        position: relative;
+        &::after {
+            background: $white;
+            height: 1px;
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: $nbSec ease-in-out;
+        }
+        @include hover {
+            &::after {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
 
     @media (max-width: $breakpointSmall) {
         padding: 30px 0 20px;
