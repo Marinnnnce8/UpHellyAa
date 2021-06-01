@@ -151,31 +151,3 @@ function renderItems(a, b) {
     "div"
   );
 }
-document.getElementsByClassName("main-nav-mobile") &&
-  (Mmenu.configs.classNames.selected = "uk-active");
-function navigation() {
-  var a = new Mmenu(
-      ".main-nav-mobile",
-      {
-        pageScroll: !0,
-        scrollBugFix: { fix: !0 },
-        onClick: { close: !0 },
-        extensions: ["fx-listitems-slide", "fullscreen", "fx-panels-slide-100"]
-      },
-      { classNames: { panel: "Panel", selected: "uk-active" } }
-    ),
-    b = a.API;
-  document.querySelector("#nav-open-btn").addEventListener("click", function() {
-    b.open();
-  }),
-    document
-      .querySelector("#nav-close-btn")
-      .addEventListener("click", function() {
-        b.close();
-      });
-}
-window.addEventListener("load", function() {
-  if ($(".main-nav-mobile").length) {
-    navigation();
-  }
-});
